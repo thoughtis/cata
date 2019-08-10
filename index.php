@@ -1,2 +1,9 @@
-<?php get_header(); ?>
-<?php get_footer();
+<?php 
+/**
+ * Index
+ * 
+ * @package Cata
+ */
+
+get_header();
+get_footer();
