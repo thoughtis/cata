@@ -7,7 +7,7 @@
  */
 
 ?>
-<footer class="site-footer" id="colophon" role="contentinfo">
+<footer class="site-footer" id="footer" role="contentinfo">
 	<p>
 	<?php if ( function_exists( 'vip_powered_wpcom' ) ) : ?>
 		<?php vip_powered_wpcom(); ?>
