@@ -6,4 +6,4 @@
  */
 
 ?>
-<section class="site-sidebar" id="secondary"></section>
+<section class="site__secondary area--widget" id="secondary"></section>
