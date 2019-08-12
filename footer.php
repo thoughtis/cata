@@ -8,6 +8,13 @@
  */
 
 ?>
+<?php
+get_search_form(
+	array(
+		'aria_label' => esc_html__( 'Full Site', 'cata' ),
+	)
+);
+?>
 <footer class="site__footer" id="footer" role="contentinfo">
 	<p>
 	<?php if ( function_exists( 'vip_powered_wpcom' ) ) : ?>

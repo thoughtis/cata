@@ -15,11 +15,4 @@ get_header();
 	<?php get_sidebar(); ?>
 </div>
 <?php
-get_search_form(
-	array(
-		'aria_label' => 'Full Site',
-	)
-);
-?>
-<?php
 get_footer();
