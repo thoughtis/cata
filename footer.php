@@ -1,13 +1,21 @@
 <?php 
 /**
  * Footer
+ * The <footer> element, not the closing of <body> or <html>.
  * 
  * @see template-parts/document-close.php
  * @package Cata
  */
 
 ?>
-<footer class="site-footer" id="colophon" role="contentinfo">
+<?php
+get_search_form(
+	array(
+		'aria_label' => esc_html__( 'Full Site', 'cata' ),
+	)
+);
+?>
+<footer class="site__footer" id="footer" role="contentinfo">
 	<p>
 	<?php if ( function_exists( 'vip_powered_wpcom' ) ) : ?>
 		<?php vip_powered_wpcom(); ?>

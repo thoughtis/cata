@@ -7,11 +7,11 @@
 
 get_header();
 ?>
-<div class="site-content" id="content">
-	<div class="content-area" id="primary">
-		<main class="site-main" id="main">
+<div class="site__content" id="content">
+	<section class="site__primary area--content" id="primary">
+		<main class="site__main" id="main">
 		</main>
-	</div>
+	</section>
 	<?php get_sidebar(); ?>
 </div>
 <?php
