@@ -7,7 +7,7 @@
  */
 
 ?>
-<section class="site__secondary area--widget" id="secondary">
+<section class="site__secondary area--widget" id="secondary" role="complementary">
 	<?php
 	if ( is_active_sidebar( 'cata-sidebar' ) ) {
 		dynamic_sidebar( 'cata-sidebar' );
