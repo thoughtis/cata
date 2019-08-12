@@ -1,6 +1,7 @@
 <?php 
 /**
  * Header
+ * The <header> element, not the opening of <html> or <body>.
  * 
  * @see template-parts/document-open.php
  * @package Cata

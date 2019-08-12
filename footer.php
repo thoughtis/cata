@@ -1,6 +1,7 @@
 <?php 
 /**
  * Footer
+ * The <footer> element, not the closing of <body> or <html>.
  * 
  * @see template-parts/document-close.php
  * @package Cata
