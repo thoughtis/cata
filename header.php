@@ -8,6 +8,7 @@
  */
 
 get_template_part( 'template-parts/document', 'open' );
+get_template_part( 'template-parts/skip-link' );
 ?>
 <header class="site__header" id="header" role="banner">
 	<hgroup>
@@ -16,12 +17,7 @@ get_template_part( 'template-parts/document', 'open' );
 		<span><?php bloginfo( 'description', 'display' ); ?></span>
 		<?php endif; ?>
 	</hgroup>
-	<nav
-		aria-label="<?php echo esc_html__( 'Primary Navigation', 'cata' ); ?>"
-		class="site__navigation"
-		id="siteNav"
-		role="navigation"
-	>
+	<nav class="site__navigation" id="siteNav">
 	<?php
 
 	/*
