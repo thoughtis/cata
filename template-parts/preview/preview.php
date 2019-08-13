@@ -3,7 +3,7 @@
  * Preview
  * preview-*.php templates are used for posts within archives.
  * 
- * @see /template-parts/content-*.php for singular posts. 
+ * @see /template-parts/content/content-*.php for singular posts. 
  * @package Cata
  */
 
