@@ -3,11 +3,11 @@
  * Header
  * The <header> element, not the opening of <html> or <body>.
  * 
- * @see template-parts/document-open.php
+ * @see template-parts/document/document-open.php
  * @package Cata
  */
 
-get_template_part( 'template-parts/document', 'open' );
+get_template_part( 'template-parts/document/document', 'open' );
 get_template_part( 'template-parts/skip-link' );
 ?>
 <header class="site__header" id="header" role="banner">

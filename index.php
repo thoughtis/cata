@@ -17,13 +17,16 @@ get_header();
 				the_post();
 
 				if ( is_singular() ) {
-					get_template_part( 'template-parts/content', get_post_type() );
+					get_template_part( 'template-parts/content/content', get_post_type() );
 				} else { 
-					get_template_part( 'template-parts/preview', get_post_type() );
+					get_template_part( 'template-parts/preview/preview', get_post_type() );
 				}
 			}
+
+			the_posts_navigation();
+
 		} else {
-			get_template_part( 'template-parts/content', 'none' );
+			get_template_part( 'template-parts/content/content', 'none' );
 		}
 		?>
 		</main>
