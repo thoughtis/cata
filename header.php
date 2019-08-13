@@ -13,7 +13,8 @@ get_template_part( 'template-parts/skip-link' );
 <header class="site__header" id="header" role="banner">
 	<hgroup>
 		<h1>
-		<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+			<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
+		</h1>
 		<?php if ( get_bloginfo( 'description' ) ) : ?>
 		<span><?php bloginfo( 'description', 'display' ); ?></span>
 		<?php endif; ?>
