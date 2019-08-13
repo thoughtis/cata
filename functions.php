@@ -11,17 +11,42 @@ if ( ! function_exists( 'cata_after_setup_theme' ) ) :
 	 */
 	function cata_after_setup_theme() {
 
+		add_theme_support( 'align-wide' );
+		add_theme_support( 'automatic-feed-links' );
+
 		$html5_options = array(
 			'caption',
 			'comment-form',
 			'comment-list',
 			'gallery',
 			'search-form',
+			// storefront has this, but why?
+			'widgets',
 		);
+
+		/**
+		 * Theme Supports Editor Styles
+		 * 
+		 * @todo add other aspects of block editor support.
+		 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/
+		 */
+		add_theme_support( 'editor-styles' );
 
 		add_theme_support( 'html5', $html5_options );
 		add_theme_support( 'post-thumbnails' );
+		add_theme_support( 'responsive-embeds' );
 		add_theme_support( 'title-tag' );
+
+		/**
+		 * Theme Supports Woocommerce
+		 * 
+		 * @link https://github.com/woocommerce/woocommerce/wiki/Declaring-WooCommerce-support-in-themes
+		 */
+		add_theme_support( 'woocommerce' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
+		add_theme_support( 'wc-product-gallery-slider' );
+
+		add_theme_support( 'wp-block-styles' );
 
 	}
 endif;

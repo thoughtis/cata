@@ -3,7 +3,7 @@
  * Footer
  * The <footer> element, not the closing of <body> or <html>.
  * 
- * @see template-parts/document-close.php
+ * @see template-parts/document/document-close.php
  * @package Cata
  */
 
@@ -30,4 +30,4 @@ get_search_form(
 	</p>
 </footer>
 <?php
-get_template_part( 'template-parts/document', 'close' );
+get_template_part( 'template-parts/document/document', 'close' );
