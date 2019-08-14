@@ -17,48 +17,24 @@ if ( ! class_exists( 'Cata\Enqueue_Assets' ) ) :
 		 * Construct
 		 */
 		public function __construct() {
-			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_theme_styles' ) );
-			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_lazy_load_css' ) );
-			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'localize_lazy_load_css' ) );
+			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles_blocking' ) );
+			add_action( 'wp_body_open', array( __CLASS__, 'enqueue_styles_nonblocking' ) );
 		}
 
 		/**
-		 * Enqueue Theme Styles
+		 * Enqueue Blocking Styles
+		 * Output them in the head.
 		 */
-		public static function enqueue_theme_styles() : void {
+		public static function enqueue_styles_blocking() : void {
 			wp_enqueue_style( 'cata-style-critical', get_template_directory_uri() . '/assets/dist/css/critical.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
 		}
 
 		/**
-		 * Enqueue Lazy Load CSS
+		 * Enqueue Non-Blocking Styles
+		 * Output them at the end of the body.
 		 */
-		public static function enqueue_lazy_load_css() : void {
-			wp_enqueue_script( 'cata-lazy-load-css', get_template_directory_uri() . '/assets/dist/js/lazy-load-css.js', array(), wp_get_theme()->get( 'Version' ), 'true' );
-		}
-
-		/**
-		 * Localize Lazy Load CSS
-		 */
-		public static function localize_lazy_load_css() : void {
-
-			$presentational_css_with_version_number = add_query_arg(
-				array(
-					'v' => wp_get_theme()->get( 'Version' ), 
-				),
-				get_template_directory_uri() . '/assets/dist/css/presentational.css'
-			);
-
-			$default_lazy_css_files = array(
-				array(
-					'href'  => $presentational_css_with_version_number,
-					'media' => 'screen',
-				),
-			);
-
-			$lazy_css_files = apply_filters( 'cata_lazy_load_css_files', $default_lazy_css_files );
-
-			wp_localize_script( 'cata-lazy-load-css', 'cataLazyCSSFiles', $lazy_css_files );
-
+		public static function enqueue_styles_nonblocking() : void {
+			wp_enqueue_style( 'cata-style-presentational', get_template_directory_uri() . '/assets/dist/css/presentational.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
 		}
 
 	}
