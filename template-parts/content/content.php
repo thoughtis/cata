@@ -3,8 +3,9 @@
  * Content
  * content-*.php templates are used for singular posts.
  * 
- * @see /template-parts/preview/preview-*.php for posts in archives. 
  * @package Cata
+ * @see     /template-parts/preview/preview-*.php for posts in archives. 
+ * @since   0.1.0
  */
 
 ?>

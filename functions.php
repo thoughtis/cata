@@ -3,6 +3,7 @@
  * Functions
  * 
  * @package Cata
+ * @since   0.1.0
  */
 
 if ( ! function_exists( 'cata_after_setup_theme' ) ) :
