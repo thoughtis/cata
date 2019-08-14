@@ -3,8 +3,9 @@
  * Footer
  * The <footer> element, not the closing of <body> or <html>.
  * 
- * @see template-parts/document/document-close.php
  * @package Cata
+ * @see     template-parts/document/document-close.php
+ * @since   0.1.0
  */
 
 ?>

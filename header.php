@@ -3,8 +3,9 @@
  * Header
  * The <header> element, not the opening of <html> or <body>.
  * 
- * @see template-parts/document/document-open.php
  * @package Cata
+ * @see     template-parts/document/document-open.php
+ * @since   0.1.0
  */
 
 get_template_part( 'template-parts/document/document', 'open' );

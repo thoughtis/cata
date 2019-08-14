@@ -3,6 +3,7 @@
  * Document Close
  * 
  * @package Cata
+ * @since   0.1.0
  */
 
 ?>

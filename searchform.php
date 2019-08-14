@@ -4,6 +4,7 @@
  * $args are available globally from get_search_form()
  * 
  * @package Cata
+ * @since   0.1.0
  */
 
 ?>
