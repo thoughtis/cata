@@ -5,6 +5,9 @@
  * @package Cata
  */
 
-new Cata\Languages();
-new Cata\Nav_Menus();
-new Cata\Sidebar();
+namespace Cata;
+
+new Enqueue_Assets();
+new Languages();
+new Nav_Menus();
+new Sidebar();
