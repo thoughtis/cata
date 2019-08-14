@@ -17,14 +17,22 @@
   },
   "homepage": "https://github.com/thoughtis/cata#readme",
   "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@wordpress/eslint-plugin": "^2.4.0",
     "autoprefixer": "^9.6.1",
+    "babel-preset-minify": "^0.5.0",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
+    "gulp-better-rollup": "^4.0.1",
+    "gulp-eslint": "^6.0.0",
     "gulp-less": "^4.0.1",
     "gulp-postcss": "^8.0.0",
     "less-plugin-glob": "^3.0.0",
     "normalize.css": "^8.0.1",
-    "postcss-clean": "^1.1.0"
+    "postcss-clean": "^1.1.0",
+    "rollup": "^1.19.4",
+    "rollup-plugin-babel": "^4.3.3"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7"

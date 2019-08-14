@@ -7,15 +7,20 @@
 const autoprefixer = require( 'autoprefixer' );
 const browserSync  = require( 'browser-sync' );
 const cssnano      = require( 'cssnano' );
+const eslint       = require( 'gulp-eslint' );
 const gulp         = require( 'gulp' );
 const less         = require( 'gulp-less' );
 const lessGlob     = require( 'less-plugin-glob' );
 const path         = require( 'path' );
 const postcss      = require( 'gulp-postcss' );
 const postcssClean = require( 'postcss-clean' );
+const rollup       = require( 'gulp-better-rollup' );
+const rollupBabel  = require( 'rollup-plugin-babel' );
 
 /**
  * Task: LESS
+ * 
+ * @param {function} done
  */
 function taskLess( done ) {
 
@@ -61,7 +66,7 @@ gulp.task( 'lessWatch', taskLessWatch )
  * Sync with browser
  * The host will be wrapped with a proxy URL http://localhost:3000/
  * 
- * @param function done
+ * @param {function} done
  */
 function taskBrowserSync( done ) {
 
@@ -78,6 +83,64 @@ function taskBrowserSync( done ) {
 gulp.task( 'browserSync', taskBrowserSync );
 
 /**
+ * Task Scripts
+ * 
+ * @param {function} done 
+ */
+async function taskScripts( done ) {
+
+	const inputSettings = {
+		plugins: [
+			rollupBabel()
+		]
+	};
+
+	const outputSettings = {
+		format: 'iife'
+	};
+
+	gulp
+		.src( './assets/src/js/*.js' )
+		.pipe( rollup( inputSettings, outputSettings ) )
+		.pipe( gulp.dest( './assets/dist/js/' ) );
+
+	done();
+
+}
+gulp.task( 'scripts', taskScripts );
+
+/**
+ * Task Scripts Watch
+ * 
+ * @param {function} done 
+ */
+function taskScriptsWatch( done ) {
+
+	gulp
+		.watch( './assets/src/js/**/*.js', gulp.series( 'scripts' ) )
+		.on( 'change', scriptsOnChange );
+
+	done();
+
+}
+gulp.task( 'scriptsWatch', taskScriptsWatch );
+
+/**
+ * On Change
+ * 
+ * @param {string} pathToChangedFile 
+ */
+function scriptsOnChange( pathToChangedFile ) {
+
+	// ESLint
+	gulp
+		.src( pathToChangedFile )
+		.pipe( eslint() )
+		.pipe( eslint.formatEach( 'table', process.stderr ) );
+
+}
+
+/**
  * Default
  */
-gulp.task( 'default', gulp.parallel( 'browserSync', 'less', 'lessWatch' ) );
+gulp.task( 'default', gulp.series( 'browserSync', 'less', 'lessWatch', 'scripts', 'scriptsWatch' ) );
