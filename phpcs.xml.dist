@@ -2,6 +2,7 @@
 <ruleset name="Cata Theme">
 	<description>WordPress and WordPress VIP Go Standards.</description>
 	<file>./</file>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
 	<exclude-pattern>*/*\.(css)$</exclude-pattern>
 	<rule ref="WordPress"/>
