@@ -9,12 +9,12 @@
  */
 
 ?>
-<article <?php post_class(); ?>>
-	<header>
-		<h1><?php the_title(); ?></h1>
+<article <?php post_class( 'entry' ); ?>>
+	<header class="entry__header">
+		<h1 class="entry__title"><?php the_title(); ?></h1>
 	</header>
 	<?php if ( has_post_thumbnail() ) : ?>
-	<figure>
+	<figure class="entry__image">
 		<?php the_post_thumbnail(); ?>
 		<?php if ( '' !== get_the_post_thumbnail_caption() ) : ?>
 		<figcaption>
@@ -23,8 +23,16 @@
 		<?php endif; ?>
 	</figure>
 	<?php endif; ?>
-	<div>
+	<div class="entry__content">
 		<?php the_content(); ?>
 	</div>
-	<footer></footer>
+	<?php
+	wp_link_pages(
+		array(
+			'before' => '<nav class="navigation navigation--entry">' . esc_html__( 'Pages:', 'cata' ),
+			'after'  => '</nav>',
+		)
+	);
+	?>
+	<footer class="entry__footer"></footer>
 </article>
