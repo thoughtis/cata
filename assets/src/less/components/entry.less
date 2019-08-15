@@ -4,7 +4,16 @@
 
 // .entry {}
 
-.entry__content{
-	.clearfix-after;
+.entry__content {
+
+	.clearfix--after;
 	.stack;
+
+	> .alignleft,
+	> .alignright,
+	* > .alignleft,
+	* > .alignright {
+		margin-block-end: 1.5em;
+	}
+
 }
