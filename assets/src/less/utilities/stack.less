@@ -1,0 +1,26 @@
+/**
+ * Stack
+ *
+ * @link https://every-layout.dev/layouts/stack/
+ */
+
+.stack {
+	> * {
+		margin-block-end: 0;
+	}
+	> * + * {
+		margin-block-start: 1.5em;
+	}
+}
+
+.stack--tight {
+	> * + * {
+		margin-block-start: 0.5em;
+	}
+}
+
+.stack--loose {
+	> * + * {
+		margin-block-start: 3em;
+	}
+}

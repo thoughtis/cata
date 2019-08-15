@@ -9,12 +9,14 @@
  */
 
 ?>
-<article <?php post_class(); ?>>
-	<header>
-		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+<article <?php post_class( 'preview' ); ?>>
+	<header class="preview__header">
+		<h2 class="preview__title">
+			<a class="preview__permalink" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+		</h2>
 	</header>
 	<?php if ( has_post_thumbnail() ) : ?>
-	<figure>
+	<figure class="preview__image">
 		<a href="<?php the_permalink(); ?>">
 			<?php the_post_thumbnail(); ?>
 		</a>
@@ -25,8 +27,8 @@
 		<?php endif; ?>
 	</figure>
 	<?php endif; ?>
-	<div>
+	<div class="preview__content">
 		<?php the_excerpt(); ?>
 	</div>
-	<footer></footer>
+	<footer class="preview__footer"></footer>
 </article>
