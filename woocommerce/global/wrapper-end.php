@@ -6,5 +6,6 @@
  */
 
 ?>
-	</main>
-</section>
+		</main><!-- #main -->
+	</section><!-- #primary -->
+</div><!-- #content -->
