@@ -2,7 +2,8 @@
 /**
  * woocommerce/global/wrapper-end
  *
- * @package Cata
+ * @package WooCommerce/Templates
+ * @version 3.3.0
  */
 
 ?>
