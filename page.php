@@ -18,7 +18,7 @@ get_header();
 
 			get_template_part( 'template-parts/content/content', get_post_type() );
 			
-			the_post_navigation();
+			wp_link_pages();
 
 			if ( comments_open() ) :
 				comments_template();
