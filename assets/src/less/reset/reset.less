@@ -32,3 +32,22 @@ code, pre {
 pre {
 	padding-block-end: 1.5em;
 }
+
+button,
+input,
+select,
+option,
+optgroup {
+	line-height: inherit;
+	font-size: inherit;
+}
+
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+	cursor: pointer;
+	&[disabled] {
+		cursor: default;
+	}
+}
