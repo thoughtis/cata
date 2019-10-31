@@ -28,7 +28,7 @@ if ( ! class_exists( 'Cata\Nav_Menus' ) ) :
 		public static function register_nav_menus() : void {
 			
 			$nav_menu_options = array(
-				'site-nav' => esc_html__( 'Primary Navigation', 'cata' ),
+				'header-nav' => esc_html__( 'Primary Navigation', 'cata' ),
 			);
 			
 			register_nav_menus( $nav_menu_options );

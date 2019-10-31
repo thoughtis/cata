@@ -9,4 +9,5 @@
 ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
+	<?php get_sidebar(); ?>
 </div><!-- #content -->
