@@ -15,7 +15,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div class="area--comments comments" id="comments">
+<div class="comments" id="comments">
 	<h2 class="comments__title"><?php esc_html_e( 'Comments', 'cata' ); ?></h2>
 	<?php if ( have_comments() ) : ?>
 		<ol>

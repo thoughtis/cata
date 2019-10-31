@@ -11,23 +11,23 @@
 get_template_part( 'template-parts/document/document', 'open' );
 get_template_part( 'template-parts/skip-link' );
 ?>
-<header class="site__header" id="header" role="banner">
+<header class="header" id="header" role="banner">
 	<hgroup>
-		<h1 class="site__title">
+		<h1 class="header__title">
 			<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
 		</h1>
 		<?php if ( get_bloginfo( 'description' ) ) : ?>
-		<span class="site__description"><?php bloginfo( 'description', 'display' ); ?></span>
+		<span class="header__description"><?php bloginfo( 'description', 'display' ); ?></span>
 		<?php endif; ?>
 	</hgroup>
-	<nav class="site__navigation" id="siteNav">
+	<nav class="header__navigation" id="headerNav">
 	<?php
 
 	/*
 	Output:
-	<nav class="site__navigation" id="siteNav" role="navigation">
-		<div class="menu--site">
-			<ul class="menu" id="siteNavMenu">
+	<nav class="header__navigation" id="headerNav" role="navigation">
+		<div class="menu--header">
+			<ul class="menu" id="headerNavMenu">
 				<li class="menu-item"><a>Link</a></li>
 			</ul>
 		</div>
@@ -36,9 +36,9 @@ get_template_part( 'template-parts/skip-link' );
 
 	wp_nav_menu(
 		array(
-			'theme_location'  => 'site-nav',
-			'menu_id'         => 'siteNavMenu',
-			'container_class' => 'menu--site',
+			'theme_location'  => 'header-nav',
+			'menu_id'         => 'headerNavMenu',
+			'container_class' => 'menu--header',
 		)
 	);
 	?>
