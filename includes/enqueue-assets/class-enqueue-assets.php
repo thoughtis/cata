@@ -18,8 +18,20 @@ if ( ! class_exists( 'Cata\Enqueue_Assets' ) ) :
 		 * Construct
 		 */
 		public function __construct() {
+			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'dequeue_wp_block_styles' ) );
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles_blocking' ) );
 			add_action( 'wp_body_open', array( __CLASS__, 'enqueue_styles_nonblocking' ) );
+		}
+
+		/**
+		 * Dequeue WP Block Styles
+		 * We'll use our own.
+		 */
+		public function dequeue_wp_block_styles() {
+			wp_dequeue_style( 'wp-block-library' );
+			wp_deregister_style( 'wp-block-library' );
+			wp_dequeue_style( 'wp-block-library-theme' );
+			wp_deregister_style( 'wp-block-library-theme' );
 		}
 
 		/**

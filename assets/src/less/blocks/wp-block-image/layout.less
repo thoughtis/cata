@@ -1,0 +1,63 @@
+/**
+ * wp-block-image
+ */
+
+.wp-block-image {
+	&.alignwide,
+	&.alignfull {
+		img {
+			inline-size: 100%;
+		}
+	}
+}
+
+.wp-block-image figure,
+.wp-caption {
+
+	&.aligncenter {
+		.text-center;
+		img {
+			.margin-inline( auto );
+		}
+	}
+	
+	&.alignleft {
+		float: inline-start;
+		margin-inline-end: @space-2;
+		margin-block-end: @space-3;
+		.text-start;
+	}
+	
+	&.alignright {
+		float: inline-end;
+		margin-inline-start: @space-2;
+		margin-block-end: @space-3;
+		.text-end;
+	}
+
+}
+
+.wp-block-image figcaption,
+.wp-caption-text {
+	font-size: @fs-sm;
+	line-height: @line-height-2;
+	margin-block-start: @space-1;
+}
+
+img {
+	&.aligncenter {
+		.margin-inline( auto );
+	}
+	
+	&.alignleft {
+		float: inline-start;
+		margin-inline-end: @space-2;
+		margin-block-end: @space-3;
+	}
+	
+	&.alignright {
+		float: inline-end;
+		margin-inline-start: @space-2;
+		margin-block-end: @space-3;
+	}
+}

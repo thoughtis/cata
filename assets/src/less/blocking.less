@@ -1,9 +1,41 @@
 /**
  * Blocking CSS
  * We'll let this be load blocking in the <head>.
+ * Uses the Inverted Triangle structure, with the exception of Objects / Components.
+ * @link https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
  */
 
+/**
+ * Settings
+ */
+@import "variables/**";
+
+/**
+ * Tools
+ */
+@import "mixins/**";
+@import (reference) "utilities/**";
+
+/**
+ * Generic
+ */
 @import (inline) "../../../node_modules/normalize.css/normalize.css";
 @import "reset/**";
+
+/**
+ * Elements
+ */
+@import "elements/**";
+
+/**
+ * Objects / Components
+ * Its all components all the way down. Do your best to fight inheritance or specificity issues.
+ */
+@import "components/**/layout.less";
+@import "blocks/**/layout.less";
+@import "blocks/modifiers/layout/**";
+
+/**
+ * Utilities
+ */
 @import "utilities/**";
-@import "components/**";

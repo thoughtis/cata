@@ -1,0 +1,73 @@
+/**
+ * Logical Properties
+ */
+
+/**
+ * Border
+ */
+.border-block( @value ) {
+	border-block-start: @value;
+	border-block-end: @value;
+}
+
+.border-inline( @value ) {
+	border-inline-start: @value;
+	border-inline-end: @value;
+}
+
+/**
+ * Margin
+ */
+.margin-block( @value ) {
+	margin-block-start: @value;
+	margin-block-end: @value;
+}
+
+.margin-inline( @value ) {
+	margin-inline-start: @value;
+	margin-inline-end: @value;
+}
+
+/**
+ * Padding
+ */
+.padding-block( @value ) {
+	padding-block-start: @value;
+	padding-block-end: @value;
+}
+
+.padding-inline( @value ) {
+	padding-inline-start: @value;
+	padding-inline-end: @value;
+}
+
+/**
+ * Inset / Positioning
+ */
+.inset-inline-start( @value ) {
+	left: @value;
+	@supports( inset-inline-start: @value ) {
+		inset-inline-start: @value
+	}
+}
+
+.inset-inline-end( @value ) {
+	right: @value;
+	@supports( inset-inline-end: @value ) {
+		inset-inline-end: @value
+	}
+}
+
+.inset-block-start( @value ) {
+	top: @value;
+	@supports( inset-block-start: @value ) {
+		inset-block-start: @value
+	}
+}
+
+.inset-block-end( @value ) {
+	bottom: @value;
+	@supports( inset-block-end: @value ) {
+		inset-block-end: @value;
+	}
+}

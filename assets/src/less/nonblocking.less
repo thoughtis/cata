@@ -2,3 +2,14 @@
  * Non-Blocking CSS
  * We'll load this last, at the end of the body.
  */
+
+@import "variables/**";
+@import (reference) "utilities/**";
+@import "components/**/theme.less";
+
+/**
+ * @see /wp-includes/css/dist/block-library/style.css
+ * @see /wp-includes/css/dist/block-library/theme.css
+ */
+@import "blocks/**/theme.less";
+@import "blocks/modifiers/theme/**";
