@@ -4,34 +4,34 @@
 
 .entry {
 	.stack--loose;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	padding-inline-start: @space-vw-2;
+	padding-inline-end: @space-vw-2;
 }
 
 .entry__content {
 
 	.clearfix--after;
 	.stack;
+	.margin-inline( auto );
+	max-inline-size: 64rem;
 
 	> * {
-		inline-size: 32rem;
-		margin-inline-start: @space-vw-2;
-		margin-inline-end: @space-vw-2;
-		max-inline-size: ( 100vw - ( @space-vw-2 * 2 ) );
+		max-inline-size: 32rem;
 	}
 
 	> .alignwide {
-		inline-size: 64rem;
+		max-inline-size: 100%;
 	}
 
 	> .alignfull {
-		inline-size: calc( 64rem + ( @space-vw-2 * 2 ) );
-		margin-inline-start: 0;
-		margin-inline-end: 0;
-		max-inline-size: 100%;
+		max-inline-size: none;
+		.margin-inline( -@space-vw-2 );
 	}
 
 }
 
 .theme-prefers-align-center .entry__content > * {
-	margin-inline-start: auto;
-	margin-inline-end: auto;
+	.margin-inline( auto );
 }

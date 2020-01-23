@@ -47,6 +47,7 @@
 .inset-inline-start( @value ) {
 	left: @value;
 	@supports( inset-inline-start: @value ) {
+		left: initial;
 		inset-inline-start: @value
 	}
 }
@@ -54,6 +55,7 @@
 .inset-inline-end( @value ) {
 	right: @value;
 	@supports( inset-inline-end: @value ) {
+		right: initial;
 		inset-inline-end: @value
 	}
 }
@@ -61,6 +63,7 @@
 .inset-block-start( @value ) {
 	top: @value;
 	@supports( inset-block-start: @value ) {
+		top: initial;
 		inset-block-start: @value
 	}
 }
@@ -68,6 +71,7 @@
 .inset-block-end( @value ) {
 	bottom: @value;
 	@supports( inset-block-end: @value ) {
+		bottom: initial;
 		inset-block-end: @value;
 	}
 }
