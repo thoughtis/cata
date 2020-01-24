@@ -27,11 +27,11 @@ if ( ! class_exists( 'Cata\Enqueue_Assets' ) ) :
 		 * Dequeue WP Block Styles
 		 * We'll use our own.
 		 */
-		public function dequeue_wp_block_styles() {
+		public static function dequeue_wp_block_styles() {
 			wp_dequeue_style( 'wp-block-library' );
 			wp_deregister_style( 'wp-block-library' );
-			wp_dequeue_style( 'wp-block-library-theme' );
-			wp_deregister_style( 'wp-block-library-theme' );
+		//	wp_dequeue_style( 'wp-block-library-theme' );
+		//	wp_deregister_style( 'wp-block-library-theme' );
 		}
 
 		/**

@@ -1,0 +1,34 @@
+/**
+ * .wp-block-pullquote
+ * @see wp-block-quote for the <blockquote> styles. this just wraps / positions it.
+ */
+.wp-block-pullquote {
+
+	.padding-block( @space-3 );
+	.padding-inline( @space-vw-2 );
+	font-size: @fs-h3;
+
+	// WP assumes you'll separate this with lines on the block edges.
+	&.is-style-default {
+		.border-block( 0.125em double currentColor );
+	}
+
+	// WP assumes you'll distinguish this with whitespace
+	// ( even if that space actually has a solid background color ).
+	// &.is-style-solid-color {}
+
+	// &.alignfull {}
+	// &.alignwide {}
+
+	&.alignleft {
+		margin-inline-start: -@space-vw-2;
+		margin-inline-end: auto;
+		
+	}
+	
+	&.alignright {
+		margin-inline-start: auto;
+		margin-inline-end: -@space-vw-2;
+	}
+
+}

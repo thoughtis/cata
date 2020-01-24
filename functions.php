@@ -47,11 +47,56 @@ if ( ! function_exists( 'cata_after_setup_theme' ) ) :
 		add_theme_support( 'wc-product-gallery-lightbox' );
 		add_theme_support( 'wc-product-gallery-slider' );
 
-		add_theme_support( 'wp-block-styles' );
+		add_theme_support( 'disable-custom-font-sizes' );
+		add_theme_support( 'disable-custom-colors' );
+
+		add_theme_support( 'editor-font-sizes', array(
+			array(
+				'name' => __( 'Small', 'cata' ),
+				'size' => 14,
+				'slug' => 'small'
+			),
+			array(
+				'name' => __( 'Regular', 'cata' ),
+				'size' => 16,
+				'slug' => 'regular'
+			),
+			array(
+				'name' => __( 'Medium (H5)', 'cata' ),
+				'size' => 18,
+				'slug' => 'medium'
+			),
+			array(
+				'name' => __( 'Large (H3)', 'cata' ),
+				'size' => 22,
+				'slug' => 'large'
+			),
+			array(
+				'name' => __( 'Huge (H1)', 'cata' ),
+				'size' => 32,
+				'slug' => 'huge'
+			)
+		) );
 
 	}
 endif;
 add_action( 'after_setup_theme', 'cata_after_setup_theme' );
+
+
+add_filter( 'allowed_block_types', function( $allowed_block_types, WP_Post $post ) : array {
+	return [
+		// common
+		'core/paragraph',
+		'core/image',
+		'core/heading',
+		'core/gallery',
+		'core/list',
+		'core/quote',
+
+		// formatting
+		'core/pullquote',
+	];
+}, 10, 2 );
 
 /**
  * Autoload
