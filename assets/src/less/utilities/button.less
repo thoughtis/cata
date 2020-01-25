@@ -1,0 +1,59 @@
+/**
+ * Buttons, or button style links.
+ */
+
+.button-layout() {
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		inline-size: 100%;
+		block-size: 100%;
+		position: absolute;
+	}
+	border-radius: 0.125em;
+	border-width: 0.125em;
+	display: inline-block;
+	line-height: 1;
+	padding: @space-2;
+	position: relative;
+}
+
+.button-theme() {
+	&:before {
+		background-color: currentColor;
+		opacity: 0.05;
+	}
+	background-color: transparent;
+	border-color: currentColor;
+	border-style: solid;
+	color: currentColor;
+	text-decoration: none;
+}
+
+.button-states() {
+	&[disabled] {
+		cursor: default;
+		&:before {
+			opacity: 0.25;
+		}
+	}
+	&:not([disabled]) {
+		&:hover,
+		&:focus,
+		&:active {
+			&:before {
+				opacity: 0;
+				transition: opacity 100ms linear;
+			}
+		}
+	}	
+}
+
+.button {
+	.button-layout;
+	.button-theme;
+	.button-states;
+}

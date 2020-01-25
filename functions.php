@@ -92,6 +92,10 @@ add_filter( 'allowed_block_types', function( $allowed_block_types, WP_Post $post
 		'core/gallery',
 		'core/list',
 		'core/quote',
+		'core/audio',
+	//	'core/cover',
+		'core/file',
+		'core/video',
 
 		// formatting
 		'core/pullquote',

@@ -1,0 +1,35 @@
+/**
+ * wp-block-file
+ */
+
+.wp-block-file {
+
+	a:first-of-type {}
+
+	* + .wp-block-file__button {
+		margin-inline-start: 1ch;
+	}
+
+	// a
+	.wp-block-file__button {
+		.button;
+	}
+
+	&.alignleft {
+		margin-inline-start: 0;
+		margin-inline-end: auto;
+	}
+
+	&.aligncenter {
+		text-align: center;
+		audio {
+			.margin-inline( auto );
+		}
+	}
+
+	&.alignright {
+		margin-inline-start: auto;
+		margin-inline-end: 0;
+	}
+
+}
