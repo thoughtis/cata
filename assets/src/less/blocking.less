@@ -12,28 +12,15 @@
 
 /**
  * Tools
+ * Utilities can also be used like mixins,
+ * but have to be imported last so they're output at the end of the compiled file.
  */
 @import "mixins/**";
-// @import (reference) "utilities/**";
-
-:root {
-	// body
-	--color-background: white;
-	--color-text: black;
-	// links
-	--color-link: mediumblue;
-	--color-link-visited: darkblue;
-	--color-link-interaction: blue;
-	// buttons
-	--color-button: mediumblue;
-	--color-button-disabled: dimgray;
-	--color-button-interaction: blue;
-	--color-button-text: white;
-}
 
 /**
  * Generic
  */
+@import (once) "elements/root.less";
 @import (inline) "../../../node_modules/normalize.css/normalize.css";
 @import "reset/**";
 

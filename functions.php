@@ -102,7 +102,7 @@ add_filter( 'allowed_block_types', function( $allowed_block_types, WP_Post $post
 		'core/html',
 		'core/preformatted',
 		'core/pullquote',
-	//  'core/table',
+		'core/table',
 		'core/verse',
 		// layout
 		'core/button',

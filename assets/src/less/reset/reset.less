@@ -17,11 +17,6 @@ html {
 	font-size: calc( 0.9375em + 0.3125vw );
 }
 
-body {
-	color: var( --color-text );
-	background-color: var( --color-background );
-}
-
 figure {
 	margin: 0;
 }
@@ -78,6 +73,11 @@ p:empty {
 	margin: 0;
 }
 
-a {
-	color: currentColor;
+table {
+	inline-size: 100%;
+	border-collapse: collapse;
+	th, td {
+		padding: 0;
+		vertical-align: top;
+	}
 }
