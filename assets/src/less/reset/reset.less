@@ -17,6 +17,11 @@ html {
 	font-size: calc( 0.9375em + 0.3125vw );
 }
 
+body {
+	color: var( --color-text );
+	background-color: var( --color-background );
+}
+
 figure {
 	margin: 0;
 }
@@ -31,12 +36,12 @@ figure img {
 }
 
 code, pre {
-	max-inline-size: 100%;
-	overflow: auto;
+	font-family: Menlo, Consolas, monaco, monospace;
 }
 
 pre {
-	padding-block-end: 1.5em;
+	max-inline-size: 100%;
+	overflow: auto;
 }
 
 button,
@@ -59,7 +64,7 @@ button {
 	}
 }
 
-p, ul, ol, blockquote {
+hr, p, ul, ol, blockquote, pre {
 	margin-block-start: 0;
 	margin-block-end: 0;
 }

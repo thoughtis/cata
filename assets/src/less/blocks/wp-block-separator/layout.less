@@ -1,0 +1,27 @@
+/**
+ * wp-block-separator
+ */
+
+ // hr
+.wp-block-separator {
+
+	.margin-inline( 0 );
+	border: none;
+	border-block-end: 0.125em solid;
+
+	&.is-style-wide {
+		// mimic alignwide
+		max-inline-size: none;
+	}
+
+	&.is-style-dots {
+		border: none;
+		block-size: 1em;
+		text-align: center;
+		&:before {
+			content: @unicode-bullet @unicode-bullet @unicode-bullet;
+			letter-spacing: 1ch;
+		}
+	}
+
+}

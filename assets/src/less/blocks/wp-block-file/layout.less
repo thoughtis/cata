@@ -4,15 +4,13 @@
 
 .wp-block-file {
 
-	a:first-of-type {}
-
 	* + .wp-block-file__button {
 		margin-inline-start: 1ch;
 	}
 
 	// a
 	.wp-block-file__button {
-		.button;
+		.button-layout;
 	}
 
 	&.alignleft {
@@ -22,9 +20,6 @@
 
 	&.aligncenter {
 		text-align: center;
-		audio {
-			.margin-inline( auto );
-		}
 	}
 
 	&.alignright {

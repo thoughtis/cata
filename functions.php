@@ -96,9 +96,22 @@ add_filter( 'allowed_block_types', function( $allowed_block_types, WP_Post $post
 	//	'core/cover',
 		'core/file',
 		'core/video',
-
 		// formatting
+		'core/code',
+		'core/classic',
+		'core/html',
+		'core/preformatted',
 		'core/pullquote',
+	//  'core/table',
+		'core/verse',
+		// layout
+		'core/button',
+		'core/columns',
+		'core/more',
+		'core/nextpage',
+		'core/separator',
+		'core/spacer',
+		'core/media-text'
 	];
 }, 10, 2 );
 
