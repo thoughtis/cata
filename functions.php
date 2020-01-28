@@ -84,6 +84,7 @@ add_action( 'after_setup_theme', 'cata_after_setup_theme' );
 
 
 add_filter( 'allowed_block_types', function( $allowed_block_types, WP_Post $post ) : array {
+
 	return [
 		// common
 		'core/paragraph',
@@ -111,7 +112,18 @@ add_filter( 'allowed_block_types', function( $allowed_block_types, WP_Post $post
 		'core/nextpage',
 		'core/separator',
 		'core/spacer',
-		'core/media-text'
+		'core/media-text',
+		// widgets
+		'core/shortcode',
+		// embeds
+		'core/embed',
+
+		'core-embed/twitter',
+		'core-embed/youtube',
+		'core-embed/instagram',
+		'core-embed/spotify',
+		'core-embed/vimeo',
+
 	];
 }, 10, 2 );
 
