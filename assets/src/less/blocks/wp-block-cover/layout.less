@@ -1,0 +1,57 @@
+/**
+ * WP Block Cover
+ */
+
+.wp-block-cover {
+
+	background-size: cover;
+	background-position: center center;
+	color: var( --color-background );
+	inline-size: 100%;
+	block-size: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	min-block-size: 52.03125vw;
+	@media( min-width: @default-block-equals-content-width ) {
+		min-block-size: 18em;
+	}
+
+	&.alignwide {
+		min-block-size: 52.03125vw;
+		@media( min-width: @wide-block-equals-content-width ) {
+			min-block-size: 36em;
+		}
+	}
+
+	&.alignfull {
+		inline-size: auto;
+		min-block-size: 56.25vw;
+	}
+
+	&.has-background-dim {
+		&:before {
+			content: "";
+			background-color: var( --color-text );
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			inline-size: 100%;
+			block-size: 100%;
+			opacity: 0.25;
+			z-index: 1;
+		}
+	}
+
+	.wp-block-cover__inner-container {
+		position: relative;
+		z-index: 2;
+		.stack--tight;
+	}
+
+}
+
+// min-height: 400px;

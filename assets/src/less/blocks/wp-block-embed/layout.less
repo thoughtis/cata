@@ -1,0 +1,67 @@
+/**
+ * .wp-block-embed
+ */
+
+.wp-block-embed {
+	// don't overflow the viewport.
+	overflow-x: hidden;
+	// WP includes a max-width for floated embed blocks in their styles,
+	// but we already set it on all blocks.
+}
+
+// themes opts in to responsive embeds
+.wp-embed-responsive {
+	.wp-block-embed {
+		&.wp-has-aspect-ratio {
+			.wp-block-embed__wrapper {
+				position: relative;
+				padding-block-end: ( 9 / 16 ) * 100%;
+				> :first-child {
+					position: absolute;
+					inline-size: 100%;
+					block-size: 100%;
+					// not using inset-* properties because its the same on all sides.
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+				}
+			}
+		}
+		&.wp-embed-aspect-21-9 {
+			.wp-block-embed__wrapper {
+				padding-block-end: ( 9 / 21 ) * 100%;
+			}
+		}
+		&.wp-embed-aspect-18-9 {
+			.wp-block-embed__wrapper {
+				padding-block-end: ( 9 / 18 ) * 100%;
+			}
+		}
+		&.wp-embed-aspect-16-9 {
+			.wp-block-embed__wrapper {
+				padding-block-end: ( 9 / 16 ) * 100%;
+			}
+		}
+		&.wp-embed-aspect-4-3 {
+			.wp-block-embed__wrapper {
+				padding-block-end: ( 3 / 4 ) * 100%;
+			}
+		}
+		&.wp-embed-aspect-1-1 {
+			.wp-block-embed__wrapper {
+				padding-block-end: 100%;
+			}
+		}
+		&.wp-embed-aspect-9-16 {
+			.wp-block-embed__wrapper {
+				padding-block-end: ( 16 / 9 ) * 100%;
+			}
+		}
+		&.wp-embed-aspect-1-2 {
+			.wp-block-embed__wrapper {
+				padding-block-end: 200%;
+			}
+		}
+	}
+}

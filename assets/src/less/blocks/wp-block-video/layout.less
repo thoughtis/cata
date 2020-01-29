@@ -1,0 +1,35 @@
+/**
+ * .wp-block-video
+ */
+
+// figure
+.wp-block-video {
+
+	&.alignleft {
+		margin-inline-start: 0;
+		margin-inline-end: auto;
+	}
+
+	&.aligncenter {
+		text-align: center;
+		video {
+			.margin-inline( auto );
+		}
+	}
+
+	&.alignright {
+		margin-inline-start: auto;
+		margin-inline-end: 0;
+	}
+
+	video {
+		max-inline-size: 100%;
+	}
+
+	[poster] {
+		object-fit: cover;
+	}
+
+	figcaption {}
+
+}

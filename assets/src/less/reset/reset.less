@@ -12,32 +12,39 @@
 html {
 	box-sizing: border-box;
 	line-height: 1.5;
+	font-size: 100%;
+	// 15px + 1px where 100vw = 320px 
+	font-size: calc( 0.9375em + 0.3125vw );
 }
 
 figure {
-	margin-inline-start: 0;
-	margin-inline-end: 0;
+	margin: 0;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
+	max-inline-size: 100%;
+	block-size: auto;
+}
+
+figure img {
+	display: block;
 }
 
 code, pre {
-	max-width: 100%;
-	overflow: auto;
+	font-family: Menlo, Consolas, monaco, monospace;
 }
 
 pre {
-	padding-block-end: 1.5em;
+	max-inline-size: 100%;
+	overflow: auto;
 }
 
 button,
 input,
 select,
 option,
-optgroup {
+optgroup,
+textarea {
 	line-height: inherit;
 	font-size: inherit;
 }
@@ -49,5 +56,28 @@ button {
 	cursor: pointer;
 	&[disabled] {
 		cursor: default;
+	}
+}
+
+hr, p, ul, ol, blockquote, pre {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+p:empty {
+	margin: 0;
+}
+
+table {
+	inline-size: 100%;
+	border-collapse: collapse;
+	th, td {
+		padding: 0;
+		vertical-align: top;
 	}
 }

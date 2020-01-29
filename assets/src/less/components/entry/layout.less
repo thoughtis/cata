@@ -1,0 +1,37 @@
+/**
+ * Entry Layout
+ */
+
+.entry {
+	.stack--loose;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	padding-inline-start: @space-vw-2;
+	padding-inline-end: @space-vw-2;
+}
+
+.entry__content {
+
+	.clearfix--after;
+	.stack;
+	.margin-inline( auto );
+	max-inline-size: 64rem;
+
+	> * {
+		max-inline-size: 32rem;
+	}
+
+	> .alignwide {
+		max-inline-size: 100%;
+	}
+
+	> .alignfull {
+		max-inline-size: none;
+		.margin-inline( -@space-vw-2 );
+	}
+
+}
+
+.theme-prefers-align-center .entry__content > * {
+	.margin-inline( auto );
+}

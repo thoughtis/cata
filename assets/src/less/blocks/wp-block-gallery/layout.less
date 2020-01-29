@@ -1,0 +1,70 @@
+/**
+ * wp-block-gallery
+ */
+
+// figure
+.wp-block-gallery {
+
+	// ul
+	.blocks-gallery-grid {
+		.list-reset;
+		display: grid;
+		column-gap: @space-2;
+		grid-template-columns: 100%;
+
+	}
+
+	// li
+	.blocks-gallery-item {
+		max-inline-size: 32rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		figure {
+			padding-block-end: @space-3;
+			position: relative;
+			figcaption {
+				block-size: @space-3;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				position: absolute;
+				.inset-block-end( 0 );
+				.inset-inline-start( 0 );
+				inline-size: 100%;
+				overflow: hidden;
+			}
+		}
+	}
+
+	// figcaption
+	.blocks-gallery-caption {
+	}
+
+	&.columns-2 {
+		@media( min-width: 32em ) {
+			.blocks-gallery-grid {
+				grid-template-columns: repeat( 2, calc( 50% - @space-1 ) );
+			}
+		}
+	}
+	&.columns-3 {
+		@media( min-width: 32em ) {
+			.blocks-gallery-grid {
+				grid-template-columns: repeat( 3, calc( 33.3333% - ( @space-2 * ( 2 / 3 ) ) ) );
+			}
+		}
+	}
+
+	&.is-cropped {
+		figure {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			img {
+				flex-grow: 1;
+				object-fit: cover;
+			}
+		}
+	}
+
+}

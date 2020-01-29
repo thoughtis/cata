@@ -1,0 +1,36 @@
+.wp-block-quote,
+.wp-block-pullquote blockquote {
+
+	.stack--tight;
+	.margin-inline(0);
+	// normal spacing multiplied by the amount we'll scale() the quotation marks.
+	padding-inline-start: 1.125em;
+
+	&.is-style-large {
+		font-size: @fs-h3;
+	}
+
+	p:first-of-type:before,
+	p:last-of-type:after {
+		display: inline-block;
+	}
+
+	p:first-of-type:before {
+		content: @unicode-left-double-quotation-mark;
+		position: absolute;
+		margin-inline-start: -@space-2;
+	}
+
+	p:last-of-type:after {
+		content: @unicode-right-double-quotation-mark;
+	}
+
+	cite {
+		display: block;
+		font-size: @fs-sm;
+		&:before {
+			content: "—";
+		}
+	}
+
+}

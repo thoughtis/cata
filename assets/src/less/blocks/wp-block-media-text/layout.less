@@ -1,0 +1,80 @@
+.wp-block-media-text {
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-block-start: 0;
+
+	> * {
+		flex-basis: 50% - ( @column-gap-relative / 2 );
+		margin-block-start: @row-gap;
+	}
+
+	.wp-block-media-text__content {
+		.stack;
+	}
+	
+	.wp-block-media-text__media {
+		img {
+			inline-size: 100%;
+		}
+	}
+
+	&.is-stacked-on-mobile {
+		@media( max-width: 48em ) {
+			flex-wrap: wrap;
+			> * {
+				flex-basis: 100%;
+			}
+		}
+	}
+
+	&.is-vertically-aligned-top {
+		align-items: flex-start;
+	}
+
+	&.is-vertically-aligned-bottom {
+		align-items: flex-end;
+	}
+
+	&.has-media-on-the-right {
+		> :first-child {
+			order: 2;
+		}
+		> :last-child {
+			order: 1;
+		}
+	}
+
+	&.is-image-fill {
+		align-items: initial;
+		
+		.wp-block-media-text__content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		&.is-vertically-aligned-top {
+			.wp-block-media-text__content {
+				justify-content: flex-start;
+			}
+		}
+		&.is-vertically-aligned-bottom {
+			.wp-block-media-text__content {
+				justify-content: flex-end;
+			}
+		}
+
+		.wp-block-media-text__media {
+			display: flex;
+			flex-direction: column;
+			background-size: cover;
+			img {
+				// bad for accessibility but we want the image aspect ratio.
+				visibility: hidden
+			}
+		}
+	}
+
+}

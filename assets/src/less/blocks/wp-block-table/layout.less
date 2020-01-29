@@ -1,0 +1,28 @@
+/**
+ * .wp-block-table
+ */
+
+.wp-block-table {
+
+	overflow-x: auto;
+
+	&.alignleft {
+		margin-inline-start: 0;
+		margin-inline-end: auto;
+	}
+	
+	&.alignright {
+		margin-inline-start: auto;
+		margin-inline-end: 0;
+	}
+
+	.has-fixed-layout {
+		table-layout: fixed;
+	}
+
+	table td, th {
+		border: 0.0625em solid;
+		padding: 0.125em;
+	}
+
+}

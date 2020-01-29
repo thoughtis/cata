@@ -1,0 +1,23 @@
+/**
+ * Alignment
+ */
+
+.text-left,
+.text-start {
+	text-align: left;
+	@supports( text-align: end ) {
+		text-align: start;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right,
+.text-end {
+	text-align: right;
+	@supports( text-align: end ) {
+		text-align: end;
+	}
+}

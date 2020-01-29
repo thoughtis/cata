@@ -5,22 +5,19 @@
  */
 
 .stack {
-	> * {
-		margin-block-end: 0;
-	}
 	> * + * {
-		margin-block-start: 1.5em;
+		margin-block-start: @row-gap;
 	}
 }
 
 .stack--tight {
 	> * + * {
-		margin-block-start: 0.5em;
+		margin-block-start: @row-gap / 2;
 	}
 }
 
 .stack--loose {
 	> * + * {
-		margin-block-start: 3em;
+		margin-block-start: @row-gap * 2;
 	}
 }

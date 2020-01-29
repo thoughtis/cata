@@ -1,0 +1,22 @@
+/**
+ * Lists
+ * I tried using ul[class], ol[class] to remove list styling, but it meant
+ * that any time I wanted to use a list I had to specify the element like ul.my__class
+ * to win the specificity fight. So instead I'm applying list like styles to any list
+ * that does not have a class.
+ *
+ * @see utilities/lists for a reset to use if you want to remove list styling somewhere.
+ */
+
+ul, ol {
+	&:not([class]) {
+		padding-inline-start: @space-3;
+		li + li {
+			margin-block-start: @space-2;
+		}
+		li > ol,
+		li > ul {
+			margin-block-start: @space-1;
+		}
+	}
+}
