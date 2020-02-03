@@ -7,13 +7,7 @@
  */
 
 get_header();
-?>
-<div class="site__content" id="content">
-	<section class="site__primary area--content" id="primary">
-		<main class="site__main" id="main">
-			<?php get_template_part( 'template-parts/content/content', 'not-found' ); ?>
-		</main>
-	</section>
-</div>
-<?php
+get_template_part( 'woocommerce/global/wrapper', 'start' );
+get_template_part( 'template-parts/content/content', 'not-found' );
+get_template_part( 'woocommerce/global/wrapper', 'end' );
 get_footer();
