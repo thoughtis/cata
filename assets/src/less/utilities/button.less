@@ -56,12 +56,116 @@
 }
 
 .button {
-	.button-layout;
-	.button-default-theme();
-	.button-default-states();
+//	.button-layout;
+//	.button-default-theme();
+//	.button-default-states();
 }
 
 .button--outline {
-	.button-outline-theme();
-	.button-outline-states();
+//	.button-outline-theme();
+//	.button-outline-states();
 }
+
+.button-reset() {
+	border-style: solid;
+	border-radius: 0.125em;
+	border-width: 0.125em;
+	display: inline-block;
+	line-height: 1;
+	padding: @space-1;
+	text-decoration: none;
+	background-color: transparent;
+	border-color: currentColor;
+	color: currentColor;
+	&:disabled,
+	&.disabled {
+		pointer-events: none;
+		opacity: 0.625;
+		mix-blend-mode: luminosity;
+	}
+}
+
+.button {
+
+	.button-reset;
+	&:hover,
+	&:active,
+	&:focus {
+		color: var( --color-button-text );
+	}
+	
+	// deemphasized color on transparent background
+	&.is-level-one {
+		border-color: transparent;
+		color: var( --color-button-text-subtle );
+		&:hover,
+		&:active,
+		&:focus {
+			color: var( --color-button-text );
+		}
+	}
+
+	// default color on transparent background
+	&.is-level-two {
+		border-color: transparent;
+		color: var( --color-button-text );
+		&:hover,
+		&:active,
+		&:focus {
+			color: var( --color-button-text-interaction );
+		}
+	}
+
+	// add outline
+	// same as regular button
+	&.is-level-three {
+		color: var( --color-button-text );
+		background-color: transparent;
+		border-color: currentColor;
+		&:hover,
+		&:active,
+		&:focus {
+			color: var( --color-button-text-interaction );
+		}
+	}
+
+	// add fill color, invert text color
+	&.is-level-four {
+		border-color: transparent;
+		background-color: var( --color-button-background );
+		color: var( --color-button-text-inverted );
+		&:hover,
+		&:active,
+		&:focus {
+			color: var( --color-button-text-inverted );
+			background-color: var( --color-button-background-interaction );
+		}
+	}
+
+	// add an effect beyond fill color
+	&.is-level-five {
+		border-color: transparent;
+		background-color: var( --color-button-background );
+		color: var( --color-button-text-inverted );
+	//	box-shadow: 0px 0px 0.5em 0 var( --color-button-shadow );
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: var( --color-button-background-interaction );
+		}
+	}
+
+}
+
+button,
+input[type="reset"],
+input[type="submit"] {
+	.button;
+}
+
+/*
+
+is-filled
+is-outlined
+
+*/
