@@ -2,81 +2,20 @@
  * Buttons, or button style links.
  */
 
-.button-layout() {
-	border-style: solid;
-	border-radius: 0.125em;
-	border-width: 0.125em;
-	display: inline-block;
-	line-height: 1;
-	padding: @space-2;
-}
-
-.button-default-theme() {
-	background-color: var( --color-button );
-	border-color: transparent;
-	color: var( --color-button-text );
-	text-decoration: none;
-}
-
-.button-outline-theme() {
-	background-color: var( --color-background );
-	border-color: var( --color-button );
-	color: var( --color-button );
-}
-
-.button-default-states() {
-	&[disabled] {
-		background-color: var( --color-button-disabled );
-		cursor: default;
-	}
-	&:not([disabled]) {
-		&:hover,
-		&:focus,
-		&:active {
-			background-color: var( --color-button-interaction );
-		}
-	}
-}
-
-.button-outline-states() {
-	&[disabled] {
-		color: var( --color-button-disabled );
-		border-color: var( --color-button-disabled );
-		background-color: var( --color-background );
-	}
-	&:not([disabled]) {
-		&:hover,
-		&:focus,
-		&:active {
-			background-color: inherit;
-			border-color: var( --color-button-interaction );
-			color: var( --color-button-interaction );
-		}
-	}
-}
-
-.button {
-//	.button-layout;
-//	.button-default-theme();
-//	.button-default-states();
-}
-
-.button--outline {
-//	.button-outline-theme();
-//	.button-outline-states();
-}
-
 .button-reset() {
 	border-style: solid;
 	border-radius: 0.125em;
 	border-width: 0.125em;
 	display: inline-block;
 	line-height: 1;
-	padding: @space-1;
+	padding: @space-2;
 	text-decoration: none;
 	background-color: transparent;
 	border-color: currentColor;
 	color: currentColor;
+	&:visited {
+		color: currentColor;
+	}
 	&:disabled,
 	&.disabled {
 		pointer-events: none;
@@ -85,9 +24,11 @@
 	}
 }
 
+
 .button {
 
 	.button-reset;
+	
 	&:hover,
 	&:active,
 	&:focus {
@@ -98,6 +39,9 @@
 	&.is-level-one {
 		border-color: transparent;
 		color: var( --color-button-text-subtle );
+		&:visited {
+			color: var( --color-button-text-subtle );
+		}
 		&:hover,
 		&:active,
 		&:focus {
@@ -109,6 +53,9 @@
 	&.is-level-two {
 		border-color: transparent;
 		color: var( --color-button-text );
+		&:visited {
+			color: var( --color-button-text );
+		}
 		&:hover,
 		&:active,
 		&:focus {
@@ -122,6 +69,9 @@
 		color: var( --color-button-text );
 		background-color: transparent;
 		border-color: currentColor;
+		&:visited {
+			color: var( --color-button-text );
+		}
 		&:hover,
 		&:active,
 		&:focus {
@@ -134,6 +84,9 @@
 		border-color: transparent;
 		background-color: var( --color-button-background );
 		color: var( --color-button-text-inverted );
+		&:visited {
+			color: var( --color-button-text-inverted );
+		}
 		&:hover,
 		&:active,
 		&:focus {
@@ -143,16 +96,3 @@
 	}
 
 }
-
-button,
-input[type="reset"],
-input[type="submit"] {
-	.button;
-}
-
-/*
-
-is-filled
-is-outlined
-
-*/
