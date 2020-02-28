@@ -36,6 +36,18 @@
 
 }
 
-.theme-prefers-align-center .entry__content > * {
-	.margin-inline( auto );
+.theme-prefers-full-screen {
+	.entry__content {
+		> .alignfull {
+			.margin-inline( calc( 50% - 50vw ) );
+		}
+	}
 }
+
+.theme-prefers-align-center {
+	.entry__content {
+		> *:not( .alignfull ) {
+			.margin-inline( auto );
+		}
+	} 
+} 
