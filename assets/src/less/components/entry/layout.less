@@ -11,14 +11,37 @@
 }
 
 .entry__content {
-
 	.clearfix--after;
 	.stack;
 	.margin-inline( auto );
 	max-inline-size: 64rem;
-
 	> * {
 		max-inline-size: 32rem;
+	}
+}
+
+.theme-prefers-align-center {
+	.entry__content {
+		> * {
+			.margin-inline( auto );
+		}
+	}
+}
+
+.entry__content {
+
+	> .alignleft {
+		margin-inline-start: 0;
+		margin-inline-end: auto;
+	}
+
+	> .aligncenter {
+		.margin-inline( auto );
+	}
+
+	> .alignright {
+		margin-inline-start: auto;
+		margin-inline-end: 0;
 	}
 
 	> .alignwide {
@@ -43,11 +66,3 @@
 		}
 	}
 }
-
-.theme-prefers-align-center {
-	.entry__content {
-		> *:not( .alignfull ) {
-			.margin-inline( auto );
-		}
-	} 
-} 
