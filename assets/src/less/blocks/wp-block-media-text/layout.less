@@ -11,7 +11,7 @@
 	}
 
 	.wp-block-media-text__content {
-		.stack;
+		.stack--tight;
 	}
 	
 	.wp-block-media-text__media {
@@ -43,6 +43,15 @@
 		}
 		> :last-child {
 			order: 1;
+		}
+		// if stacked, don't reorder on mobile.
+		&.is-stacked-on-mobile {
+			@media( max-width: 48em ) {
+				> :first-child,
+				> :last-child {
+					order: 0;
+				}
+			}
 		}
 	}
 
