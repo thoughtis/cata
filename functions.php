@@ -34,7 +34,6 @@ if ( ! function_exists( 'cata_after_setup_theme' ) ) :
 		add_theme_support( 'editor-styles' );
 
 		add_theme_support( 'html5', $html5_options );
-		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'responsive-embeds' );
 		add_theme_support( 'title-tag' );
 
