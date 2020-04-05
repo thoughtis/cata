@@ -28,6 +28,7 @@ class Image_Sizes {
 	public function __construct( Content_Width $content_width ) {
 		$this->content_width = $content_width;
 		add_action( 'after_setup_theme', array( $this, 'update_image_sizes' ) );
+		add_filter( 'image_size_names_choose', array( $this, 'get_editor_image_sizes' ) );
 	}
 
 	/**
@@ -62,6 +63,21 @@ class Image_Sizes {
 		add_theme_support( 'post-thumbnails' );
 		set_post_thumbnail_size( $__return_1280() );
 
+	}
+
+	/**
+	 * Get Editor Image Sizes
+	 * 
+	 * @return array - sizes and their descriptions to show in the post editor.
+	 */
+	public function get_editor_image_sizes() : array {
+		return array(
+			'thumbnail'    => __( 'Small', 'cata' ),
+			'medium_large' => __( 'Default', 'cata' ),
+			'1536x1536'    => __( 'Wide', 'cata' ),
+			'2048x2048'    => __( 'Full', 'cata' ),
+			'full'         => __( 'Original', 'cata' ),
+		);
 	}
 
 }
