@@ -72,11 +72,11 @@ class Image_Sizes {
 	 */
 	public function get_editor_image_sizes() : array {
 		return array(
-			'thumbnail'    => __( 'Small', 'cata' ),
-			'medium_large' => __( 'Default', 'cata' ),
-			'1536x1536'    => __( 'Wide', 'cata' ),
-			'2048x2048'    => __( 'Full', 'cata' ),
-			'full'         => __( 'Original', 'cata' ),
+			'thumbnail'      => __( 'Small', 'cata' ),
+			'medium_large'   => __( 'Default', 'cata' ),
+			'post-thumbnail' => __( 'Wide', 'cata' ),
+			'1536x1536'      => __( 'Full', 'cata' ),
+			'full'           => __( 'Original', 'cata' ),
 		);
 	}
 
