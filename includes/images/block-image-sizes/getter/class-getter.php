@@ -104,7 +104,7 @@ class Getter {
 		
 		$sizes = '50vw';
 
-		if ( false !== strpos( $block['innerHTML'], 'is-stacked-on-mobile' ) ) {
+		if ( isset( $block['innerHTML'] ) && false !== strpos( $block['innerHTML'], 'is-stacked-on-mobile' ) ) {
 			$sizes = $this->default;
 		}
 
