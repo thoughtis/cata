@@ -71,7 +71,7 @@ gulp.task( 'lessWatch', taskLessWatch )
 function taskBrowserSync( done ) {
 
 	var options = {
-		proxy: 'dev.test',
+		proxy: 'dev.local',
 		open: false
 	};
 
