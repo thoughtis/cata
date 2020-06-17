@@ -12,4 +12,31 @@
 	> * {
 		max-inline-size: 32rem;
 	}
+
+	> .alignleft {
+		margin-inline-start: 0;
+		margin-inline-end: auto;
+	}
+
+	> .aligncenter {
+		.margin-inline( auto );
+	}
+
+	> .alignright {
+		margin-inline-start: auto;
+		margin-inline-end: 0;
+	}
+
+	> .alignwide {
+		max-inline-size: 100%;
+	}
+
+	> .alignfull {
+		max-inline-size: none;
+		.margin-inline( -@space-vw-2 );
+	}
+
+	> .woocommerce {
+		max-inline-size: 100%;
+	}
 }
