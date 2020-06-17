@@ -16,19 +16,23 @@ if ( post_password_required() ) {
 }
 ?>
 <div class="comments" id="comments">
-	<h2 class="comments__title"><?php esc_html_e( 'Comments', 'cata' ); ?></h2>
-	<?php if ( have_comments() ) : ?>
-		<ol>
-		<?php
-			wp_list_comments(
-				array(
-					'style' => 'ol',
-					'type'  => 'comment',
-				)
-			);
-		?>
-		</ol>
-		<?php the_comments_navigation(); ?>
-	<?php endif; ?>
-	<?php comment_form(); ?>
+	<header class="comments__header">
+		<h2 class="comments__title"><?php esc_html_e( 'Comments', 'cata' ); ?></h2>
+	</header>
+	<div class="comments__content">
+		<?php if ( have_comments() ) : ?>
+			<ol>
+			<?php
+				wp_list_comments(
+					array(
+						'style' => 'ol',
+						'type'  => 'comment',
+					)
+				);
+			?>
+			</ol>
+			<?php the_comments_navigation(); ?>
+		<?php endif; ?>
+		<?php comment_form(); ?>
+	</div>
 </div>

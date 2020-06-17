@@ -1,0 +1,26 @@
+.comments {
+	.stack--loose;
+	padding-inline-start: @space-vw-2;
+	padding-inline-end: @space-vw-2;
+}
+
+.comments__content {
+	.clearfix--after;
+	.stack;
+	.margin-inline( auto );
+	max-inline-size: 64rem;
+	> * {
+		max-inline-size: 32rem;
+	}
+}
+
+.theme-prefers-align-center {
+    .comments__title {
+        .text-center;
+    }
+    .comments__content {
+        > * {
+            .margin-inline( auto );
+        }
+    }
+}
