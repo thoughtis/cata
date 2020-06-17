@@ -13,3 +13,14 @@
 		max-inline-size: 32rem;
 	}
 }
+
+.theme-prefers-align-center {
+    .comments__title {
+        .text-center;
+    }
+    .comments__content {
+        > * {
+            .margin-inline( auto );
+        }
+    }
+}
