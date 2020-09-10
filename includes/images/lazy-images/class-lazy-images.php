@@ -7,7 +7,7 @@
 
 namespace Cata\Images;
 
-use Jetpack_Lazy_Images;
+use Automattic\Jetpack\Jetpack_Lazy_Images;
 
 /**
  * Lazy Images
