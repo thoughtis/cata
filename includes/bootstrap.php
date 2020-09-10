@@ -14,7 +14,7 @@ new Images\Block_Image_Sizes\Setter(
 new Images\Image_Sizes(
 	new Images\Content_Width()
 );
-if ( class_exists( '\Jetpack_Lazy_Images' ) ) {
+if ( class_exists( 'Automattic\Jetpack\Jetpack_Lazy_Images' ) ) {
 	new Images\Lazy_Images();
 	new Images\Placeholders();
 }

@@ -7,7 +7,7 @@
 
 namespace Cata\Images;
 
-use Jetpack_Lazy_Images;
+use Automattic\Jetpack\Jetpack_Lazy_Images;
 use WP_Post;
 
 /**
@@ -199,9 +199,9 @@ class Placeholders {
 	 */
 	public static function change_jetpack_attribute_priority() : void {
 
-		remove_filter( 'wp_get_attachment_image_attributes', array( 'Jetpack_Lazy_Images', 'process_image_attributes' ), PHP_INT_MAX );
+		remove_filter( 'wp_get_attachment_image_attributes', array( 'Automattic\Jetpack\Jetpack_Lazy_Images', 'process_image_attributes' ), PHP_INT_MAX );
 
-		add_filter( 'wp_get_attachment_image_attributes', array( 'Jetpack_Lazy_Images', 'process_image_attributes' ), ( PHP_INT_MAX - 1 ) );
+		add_filter( 'wp_get_attachment_image_attributes', array( 'Automattic\Jetpack\Jetpack_Lazy_Images', 'process_image_attributes' ), ( PHP_INT_MAX - 1 ) );
 
 	}
 
