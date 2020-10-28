@@ -23,7 +23,7 @@
     "@wordpress/eslint-plugin": "^2.4.0",
     "autoprefixer": "^9.7.4",
     "babel-preset-minify": "^0.5.1",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.13",
     "gulp": "^4.0.2",
     "gulp-better-rollup": "^4.0.1",
     "gulp-eslint": "^6.0.0",
