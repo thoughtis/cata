@@ -4,6 +4,14 @@
  */
 
 @import "variables/**";
+
+/**
+ * Tools
+ * Utilities can also be used like mixins,
+ * but have to be imported last so they're output at the end of the compiled file.
+ */
+@import "mixins/**";
+
 @import (reference) "utilities/**";
 @import "components/**/theme.less";
 

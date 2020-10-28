@@ -6,7 +6,6 @@
 
 const autoprefixer = require( 'autoprefixer' );
 const browserSync  = require( 'browser-sync' );
-const cssnano      = require( 'cssnano' );
 const eslint       = require( 'gulp-eslint' );
 const gulp         = require( 'gulp' );
 const less         = require( 'gulp-less' );
@@ -36,8 +35,7 @@ function taskLess( done ) {
 
 	const postcssPlugins = [
 		postcssClean( postcssCleanOptions ),
-		autoprefixer(),
-		cssnano( { safe: true } )
+		autoprefixer()
 	];
 
 	gulp

@@ -1,9 +1,17 @@
 a {
-	color: var(--color-link);
-	&:visited {
-		color: var(--color-link-visited);
+	color: currentColor;
+	
+	&:link{
+		color: var(--color-accent);
+		&:hover, &:active, &:focus {
+			color: var(--color-accent-emphasized);	
+		}
 	}
-	&:hover, &:active, &:focus {
-		color: var(--color-link-interaction);
+	
+	&:visited {
+		color: var(--color-accent-deemphasized);
+		&:hover, &:active, &:focus {
+			color: var(--color-accent-emphasized);
+		}
 	}
 }

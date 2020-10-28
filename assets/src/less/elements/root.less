@@ -3,18 +3,20 @@
  */
 
 :root {
-	// body
-	--color-background: white;
-	--color-text: black;
-	// links
-	--color-link: mediumblue;
-	--color-link-visited: darkblue;
-	--color-link-interaction: blue;
-	// buttons
-	--color-button-background: mediumblue;
-	--color-button-background-interaction: blue;
-	--color-button-text: darkblue;
-	--color-button-text-inverted: white;
-	--color-button-text-interaction: blue;
-	--color-button-text-subtle: gray;
+
+	--color-background: @gray-lightest;
+	--color-background-contrast-high: @white;
+
+	--color-text-contrast-AA: @gray-dark;
+	--color-text-contrast-AAA: @gray-darker;
+	--color-text: @gray-darkest;
+	--color-text-contrast-high: @black;
+
+	--color-accent-deemphasized: @color-accent-deemphasized;
+	--color-accent: @color-accent;
+	--color-accent-emphasized: @color-accent-emphasized;
+
+	--color-button: @gray-darker;
+	--color-button-interactive: @color-accent;
+
 }
