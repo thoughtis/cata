@@ -75,3 +75,17 @@
 		inset-block-end: @value;
 	}
 }
+
+.float-start() {
+	float: left;
+	@supports( float: inline-start ) {
+		float: inline-start;
+	}
+}
+
+.float-end() {
+	float: right;
+	@supports( float: inline-end ) {
+		float: inline-end;
+	}
+}

@@ -1,20 +1,17 @@
 /**
- * Buttons, or button style links.
+ * Buttons and button style links.
  */
-
-
-
 
 .button {
 	appearance: none;
 	border: 0.125em solid currentColor;
-	border-radius: 0.125em;
+	border-radius: @space-1 / 2;
 	color: var(--color-button);
 	display: inline-block;
 	line-height: 1;
+	outline: none;
 	padding: @space-1 @space-2;
 	text-decoration: none;
-	vertical-align: middle;
 
 	&.is-disabled,
 	&.disabled,
@@ -32,6 +29,16 @@
 	&:active,
 	&:focus {
 		color: var(--color-button-interactive);
+		border-color: var(--color-button-interactive);
+	}
+
+	&:link, &:visited {
+		&:hover,
+		&:active,
+		&:focus {
+			color: var(--color-button-interactive);
+			border-color: var(--color-button-interactive);
+		}
 	}
 
 	&:active {
@@ -41,14 +48,22 @@
 }
 
 .button.has-icon {
+	vertical-align: middle;
 	svg {
-		fill: currentColor;
-		float: inline-start;
+		.float-start();
+		pointer-events: none;
+		&:not([fill]) {
+			fill: currentColor;
+		}
 		+ span {
 			margin-inline-start: @space-1;
 		}
 	}
 }
+
+/**
+ * Color Themes
+ */
 
 .button.is-secondary {
 	--color-button: var(--color-text);
@@ -60,10 +75,9 @@
 	--color-button-interactive: var(--color-accent-emphasized);
 }
 
-.button.is-purple {
-	--color-button: #BF40BF;
-	--color-button-interactive: #CC33CC;
-}
+/**
+ * Styles Utilizing Themes
+ */
 
 .button.is-transparent {
 	border-color: transparent;
@@ -75,197 +89,41 @@
 	color: var(--color-background);
 	&:link, &:visited {
 		color: var(--color-background);
+		&:hover, &:active, &:focus {
+			background-color: var(--color-button-interactive);
+			color: var(--color-background-contrast-high);
+			border-color: transparent;
+		}
 	}
 	&:hover, &:active, &:focus {
 		background-color: var(--color-button-interactive);
 		color: var(--color-background-contrast-high);
+		border-color: transparent;
 	}
 }
 
+/**
+ * Outlined is the default style.
+ * This class exists to override is-filled,
+ * which we needed for the block editor where filled is the default.
+ */
 .button.is-outlined {
 	background-color: inherit;
 	border-color: currentColor;
 	color: var(--color-button);
 	&:link, &:visited {
 		color: var(--color-button);
+		&:hover,
+		&:active,
+		&:focus {
+			color: var(--color-button-interactive);
+			border-color: var(--color-button-interactive);
+		}
 	}
 	&:hover,
 	&:active,
 	&:focus {
 		color: var(--color-button-interactive);
+		border-color: var(--color-button-interactive);
 	}
 }
-
-
-
-
-
-// .button {
-
-// 	appearance: none;
-// 	color: var(--color-button-text, black );
-// 	background-color: var(--color-button-background, transparent);
-// 	cursor: pointer;
-// 	border: 0.125em solid currentColor;
-// 	border-radius: 0.125em;
-// 	line-height: 1;
-// 	padding: @space-1 @space-2;
-// 	display: inline-block;
-// 	text-decoration: none;
-// 	vertical-align: middle;
-
-// 	&.is-disabled,
-// 	&.disabled,
-// 	&:disabled {
-// 		cursor: unset;
-// 		pointer-events: none;
-// 		opacity: 0.625;
-// 	}
-	
-// 	&:visited {
-// 		color: var(--color-button-text, black );
-// 	}
-	
-// 	&:hover,
-// 	&:active,
-// 	&:focus {
-// 		color: var(--color-button-text-interactive, blue);
-// 		transform: scale(1.0625);
-// 	}
-	
-// 	&:active {
-// 		transform: translateY(0.125em);
-// 	}
-	
-// 	&:focus {
-// 		outline: 0.0625em var(--outline-style);
-// 	}
-
-// }
-
-// .button.is-filled {
-
-// 	--color-button-background: var(--color-accent);
-// 	--color-button-text: var(--color-background);
-// 	border-color: transparent;
-// 	&:hover,
-// 	&:active,
-// 	&:focus {
-// 		--color-button-background: var(--color-accent-bright);
-// 		--color-button-text-interactive: var(--color-background-contrast-high);
-// 		outline: none;
-// 	}
-// }
-
-// .button.is-outlined {
-// 	border-color: currentColor;
-// 	--color-button-background: transparent;
-// 	--color-button-text: var(--color-accent);
-
-// 	&:hover,
-// 	&:active,
-// 	&:focus {
-// 		outline: none;
-// 		border-style: var(--outline-style);
-// 		--color-button-text-interactive: var(--color-accent-bright);
-// 	}
-// }
-
-// wp-block-button is-style-squared
-// wp-block-button is-style-outline
-
-
-// .button-reset() {
-// 	border-style: solid;
-// 	border-radius: 0.125em;
-// 	border-width: 0.125em;
-// 	display: inline-block;
-// 	line-height: 1;
-// 	padding: @space-1 @space-2;
-// 	text-decoration: none;
-// 	background-color: transparent;
-// 	border-color: currentColor;
-// 	color: currentColor;
-// 	&:visited {
-// 		color: currentColor;
-// 	}
-// 	&:disabled,
-// 	&.disabled {
-// 		pointer-events: none;
-// 		opacity: 0.625;
-// 		mix-blend-mode: luminosity;
-// 	}
-// }
-
-
-// .button {
-
-// 	.button-reset;
-	
-// 	&:hover,
-// 	&:active,
-// 	&:focus {
-// 		color: var( --color-button-text );
-// 	}
-	
-// 	// deemphasized color on transparent background
-// 	&.is-level-one {
-// 		border-color: transparent;
-// 		color: var( --color-button-text-subtle );
-// 		&:visited {
-// 			color: var( --color-button-text-subtle );
-// 		}
-// 		&:hover,
-// 		&:active,
-// 		&:focus {
-// 			color: var( --color-button-text );
-// 		}
-// 	}
-
-// 	// default color on transparent background
-// 	&.is-level-two {
-// 		border-color: transparent;
-// 		color: var( --color-button-text );
-// 		&:visited {
-// 			color: var( --color-button-text );
-// 		}
-// 		&:hover,
-// 		&:active,
-// 		&:focus {
-// 			color: var( --color-button-text-interaction );
-// 		}
-// 	}
-
-// 	// add outline
-// 	// same as regular button
-// 	&.is-level-three {
-// 		color: var( --color-button-text );
-// 		background-color: transparent;
-// 		border-color: currentColor;
-// 		&:visited {
-// 			color: var( --color-button-text );
-// 		}
-// 		&:hover,
-// 		&:active,
-// 		&:focus {
-// 			color: var( --color-button-text-interaction );
-// 		}
-// 	}
-
-// 	// add fill color, invert text color
-// 	&.is-level-four {
-// 		border-color: transparent;
-// 		background-color: var( --color-button-background );
-// 		color: var( --color-button-text-inverted );
-// 		&:visited {
-// 			color: var( --color-button-text-inverted );
-// 		}
-// 		&:hover,
-// 		&:active,
-// 		&:focus {
-// 			color: var( --color-button-text-inverted );
-// 			background-color: var( --color-button-background-interaction );
-// 		}
-// 	}
-
-// }

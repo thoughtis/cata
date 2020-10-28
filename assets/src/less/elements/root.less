@@ -12,46 +12,11 @@
 	--color-text: @gray-darkest;
 	--color-text-contrast-high: @black;
 
-	--color-accent-deemphasized: #900C01;
-	--color-accent: #AA0E01;
-	--color-accent-emphasized: #E01600;
+	--color-accent-deemphasized: @color-accent-deemphasized;
+	--color-accent: @color-accent;
+	--color-accent-emphasized: @color-accent-emphasized;
 
-	--color-button: var( --color-text-contrast-AAA );
-	--color-button-interactive: var(--color-accent);
-
-	// --color-accent: @green-light-mode-AAA;
-	// --color-accent-bright: @green-light-mode-AA;
-
-	// --color-accent-AA: @green-light-mode-AA;
-	// --color-accent-AAA: @green-light-mode-AAA;
-
-	// --color-button-text: currentColor;
-	// --color-button-text-interactive: @green-light-mode-AA;
-	// --color-button-background: transparent;
-
-	// --outline-style: solid;
-
-	@media( prefers-color-scheme: dark ) {
-		--color-background: @gray-darkest;
-		--color-background-contrast-high: @black;
-
-		--color-text-contrast-AA: @gray-light;
-		--color-text-contrast-AAA: @gray-lighter;
-		--color-text: @gray-lightest;
-		--color-text-contrast-high: @white;
-
-		--color-accent-deemphasized: #EE6255;
-		--color-accent: #FF7366;
-		--color-accent-emphasized: #FF4433;
-
-		// --color-accent: @green-dark-mode-AA;
-		// --color-accent-bright: @green-dark-mode-AAA;
-
-		// --color-accent-AA: @green-dark-mode-AA;
-		// --color-accent-AAA: @green-dark-mode-AAA;
-
-		// --color-button-text-interactive: @green-dark-mode-AA;
-
-	}
+	--color-button: @gray-darker;
+	--color-button-interactive: @color-accent;
 
 }
