@@ -14,7 +14,7 @@ const path         = require( 'path' );
 const postcss      = require( 'gulp-postcss' );
 const postcssClean = require( 'postcss-clean' );
 const rollup       = require( 'gulp-better-rollup' );
-const rollupBabel  = require( 'rollup-plugin-babel' );
+const rollupBabel  = require( '@rollup/plugin-babel' );
 
 /**
  * Task: LESS
@@ -89,7 +89,7 @@ async function taskScripts( done ) {
 
 	const inputSettings = {
 		plugins: [
-			rollupBabel()
+			rollupBabel.babel()
 		]
 	};
 
