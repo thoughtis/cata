@@ -15,6 +15,7 @@ const postcss      = require( 'gulp-postcss' );
 const postcssClean = require( 'postcss-clean' );
 const rollup       = require( 'gulp-better-rollup' );
 const rollupBabel  = require( '@rollup/plugin-babel' );
+const cssByeBye    = require( 'css-byebye' );
 
 /**
  * Task: LESS
@@ -35,7 +36,19 @@ function taskLess( done ) {
 
 	const postcssPlugins = [
 		postcssClean( postcssCleanOptions ),
-		autoprefixer()
+		autoprefixer(),
+		cssByeBye({
+			rulesToRemove: [
+				'[type=button]::-moz-focus-inner',
+				'[type=reset]::-moz-focus-inner',
+				'[type=submit]::-moz-focus-inner',
+				'button::-moz-focus-inner',
+				'button:-moz-focusring',
+				'[type=button]:-moz-focusring',
+				'[type=reset]:-moz-focusring',
+				'[type=submit]:-moz-focusring'
+			]
+		})
 	];
 
 	gulp
