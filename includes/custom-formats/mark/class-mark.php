@@ -28,7 +28,7 @@ class Mark {
 	public static function register_format() : void {
 		wp_register_script(
 			'cata-block-editor-format-mark',
-			get_stylesheet_directory_uri() . '/assets/dist/js/block-editor-format-mark.js',
+			get_template_directory_uri() . '/assets/dist/js/block-editor-format-mark.js',
 			array( 'wp-rich-text', 'wp-element', 'wp-editor', 'wp-compose', 'wp-data' ),
 			wp_get_theme()->get( 'Version' ),
 			true
