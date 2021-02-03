@@ -37,7 +37,7 @@ if ( ! class_exists( 'Cata\Enqueue_Assets' ) ) :
 		 * Output them in the head.
 		 */
 		public static function enqueue_styles_blocking() : void {
-			wp_enqueue_style( 'cata-blocking', get_template_directory_uri() . '/assets/dist/css/blocking.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
+			wp_enqueue_style( 'cata-blocking', get_template_directory_uri() . '/assets/dist/css/blocking.css', array(), wp_get_theme( 'cata' )->get( 'Version' ), 'screen' );
 		}
 
 		/**
@@ -45,7 +45,7 @@ if ( ! class_exists( 'Cata\Enqueue_Assets' ) ) :
 		 * Output them at the end of the body.
 		 */
 		public static function enqueue_styles_nonblocking() : void {
-			wp_enqueue_style( 'cata-nonblocking', get_template_directory_uri() . '/assets/dist/css/nonblocking.css', array(), wp_get_theme()->get( 'Version' ), 'screen' );
+			wp_enqueue_style( 'cata-nonblocking', get_template_directory_uri() . '/assets/dist/css/nonblocking.css', array(), wp_get_theme( 'cata' )->get( 'Version' ), 'screen' );
 		}
 
 	}
