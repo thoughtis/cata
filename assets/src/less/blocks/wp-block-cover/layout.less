@@ -10,9 +10,6 @@
 	inline-size: 100%;
 	block-size: 100%;
 	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 
 	min-block-size: 52.03125vw;
 	@media( min-width: @default-block-equals-content-width ) {
@@ -42,16 +39,77 @@
 			inline-size: 100%;
 			block-size: 100%;
 			opacity: 0.25;
-			z-index: 1;
+			z-index: 2;
+		}
+
+		&[style*=background-color]:before {
+			background-color:inherit;
 		}
 	}
 
 	.wp-block-cover__inner-container {
-		position: relative;
-		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: absolute;
+		inline-size: 100%;
+		block-size: 100%;
+		z-index: 3;
 		.stack--tight;
 	}
 
-}
+	&.alignleft {
+		max-width: 50%;
+	}
 
-// min-height: 400px;
+	&.is-position-bottom-center {
+		.wp-block-cover__inner-container {
+			justify-content: flex-end;
+			>:last-child {
+				margin-bottom: 5%;
+			}
+		}
+	}
+
+	> img {
+		&.wp-block-cover__image-background {
+			position: absolute;
+			inline-size: 100%;
+			block-size: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			z-index: 1;
+		}
+	}
+
+	&.has-background-gradient {
+		> span {
+			position: absolute;
+			block-size: 100%;
+			inline-size: 100%;
+			top: 0;
+			left: 0;
+			z-index: 2;
+		}
+
+		&:before {
+			content: none;
+			display: none;
+		}
+	}
+
+	&.has-background-dim {
+		each( range(9), {
+			&.has-background-dim-@{value}0 {
+				> span {
+					opacity: ( @value * 0.1 );
+				}
+				&:before {
+					opacity: ( @value * 0.1 );
+				}
+			}
+		} )
+	}
+
+}
