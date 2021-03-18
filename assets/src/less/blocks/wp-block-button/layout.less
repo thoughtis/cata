@@ -6,12 +6,15 @@
 
 	.wp-block-button__link {
 		.button();
-		width: 100%;
 	}
 
 	&.has-custom-width {
 
 		max-width: none;
+
+		.wp-block-button__link {
+			width: 100%;
+		}
 
 		&.wp-block-button__width-25 {
 			width: calc(25% - 0.5em);
