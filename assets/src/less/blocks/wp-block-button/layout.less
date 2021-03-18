@@ -1,47 +1,17 @@
 /**
- * .wp-block-button
- */
-
-.wp-block-button {
-
-	.wp-block-button__link {
-		.button();
-	}
-
-	&.alignleft {
-		.wp-block-button__link {
-			float: inline-start;
-			margin-inline-end: @space-2;
-		}
-	}
-
-	&.aligncenter {
-		.text-center;
-	}
-
-	&.alignright {
-		.wp-block-button__link {
-			float: inline-end;
-			margin-inline-start: @space-2;
-		}
-	}
-
-} 
-
-/**
  * .wp-block-buttons
  */
 .wp-block-buttons {
 
 	&.is-content-justification-left {
-		.text-left;
+		.text-left();
 	}
 
 	&.is-content-justification-center {
-		.text-center;
+		.text-center();
 	}
 
 	&.is-content-justification-right {
-		.text-right;
+		.text-right();
 	}
 }
