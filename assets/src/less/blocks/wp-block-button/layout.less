@@ -6,35 +6,28 @@
 
 	.wp-block-button__link {
 		.button();
-		inline-size: inherit;
+		width: 100%;
 	}
 
 	&.has-custom-width {
 
-		inline-size: 100%;
+		max-width: none;
 
 		&.wp-block-button__width-25 {
-			> * {
-				max-inline-size: 25%;
-			}
+			width: calc(25% - 0.5em);
 		}
 
 		&.wp-block-button__width-50 {
-			> * {
-				max-inline-size: 50%;
-			}
+			width: calc(50% - 0.5em);
 		}
 
 		&.wp-block-button__width-75 {
-			> * {
-				max-inline-size: 75%;
-			}
+			width: calc(75% - 0.5em)
 		}
 
 		&.wp-block-button__width-100 {
-			> * {
-				max-inline-size: 100%;
-			}
+			margin-right: 0;
+			width: 100%;
 		}
 	} 
 } 
