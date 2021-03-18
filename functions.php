@@ -48,35 +48,74 @@ if ( ! function_exists( 'cata_after_setup_theme' ) ) :
 
 		add_theme_support( 'disable-custom-font-sizes' );
 		add_theme_support( 'disable-custom-colors' );
-		add_theme_support( 'editor-color-palette', array() );
+		add_theme_support( 
+			'editor-color-palette', 
+			array(
+				array(
+					'name'  => 'White',
+					'color' => '#FFFFFF',
+				),
+				array(
+					'name'  => 'Gray-lightest',
+					'color' => '#fcfcfc',
+				),
+				array(
+					'name'  => 'Gray-lighter',
+					'color' => '#f8f8f8',
+				),
+				array(
+					'name'  => 'Gray-light',
+					'color' => '#dadada',
+				),
+				array(
+					'name'  => 'Gray-dark',
+					'color' => '#848484',
+				),
+				array(
+					'name'  => 'Gray-darker',
+					'color' => '#2b2b2b',
+				),
+				array(
+					'name'  => 'Gray-darkest',
+					'color' => '#0a0a0a',
+				),
+				array(
+					'name'  => 'Black',
+					'color' => '#000000',
+				),
+			) 
+		);
 
-		add_theme_support( 'editor-font-sizes', array(
+		add_theme_support( 
+			'editor-font-sizes', 
 			array(
-				'name' => __( 'Small', 'cata' ),
-				'size' => 14,
-				'slug' => 'small'
-			),
-			array(
-				'name' => __( 'Regular', 'cata' ),
-				'size' => 16,
-				'slug' => 'regular'
-			),
-			array(
-				'name' => __( 'Medium (H5)', 'cata' ),
-				'size' => 18,
-				'slug' => 'medium'
-			),
-			array(
-				'name' => __( 'Large (H3)', 'cata' ),
-				'size' => 22,
-				'slug' => 'large'
-			),
-			array(
-				'name' => __( 'Huge (H1)', 'cata' ),
-				'size' => 32,
-				'slug' => 'huge'
-			)
-		) );
+				array(
+					'name' => __( 'Small', 'cata' ),
+					'size' => 14,
+					'slug' => 'small',
+				),
+				array(
+					'name' => __( 'Regular', 'cata' ),
+					'size' => 16,
+					'slug' => 'regular',
+				),
+				array(
+					'name' => __( 'Medium (H5)', 'cata' ),
+					'size' => 18,
+					'slug' => 'medium',
+				),
+				array(
+					'name' => __( 'Large (H3)', 'cata' ),
+					'size' => 22,
+					'slug' => 'large',
+				),
+				array(
+					'name' => __( 'Huge (H1)', 'cata' ),
+					'size' => 32,
+					'slug' => 'huge',
+				),
+			) 
+		);
 
 	}
 endif;
