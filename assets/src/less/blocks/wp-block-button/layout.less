@@ -6,17 +6,11 @@
 	margin-inline-end: @space-1;
 	margin-block-end: @space-1;
 
-	&:last-child {
-		margin-block-end: 0;
-	}
-
 	.wp-block-button__link {
 		.button();
 	}
 
 	&.has-custom-width {
-
-		max-inline-size: none;
 
 		.wp-block-button__link {
 			inline-size: 100%;
@@ -49,6 +43,15 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	margin-block-end: -@space-1;
+
+	&.is-vertical {
+		flex-direction: column;
+
+		.wp-block-button {
+			margin-inline-end: 0;
+		}
+	}
 
 	&.is-content-justification-left {
 		justify-content: flex-start;
@@ -81,14 +84,9 @@
 
 		&.is-vertical {
 			align-items: flex-end;
-		}
-	}
-
-	&.is-vertical {
-		flex-direction: column;
-
-		> .wp-block-button {
-			margin-inline-end: 0;
+			.wp-block-button {
+				margin-inline-start: 0;
+			}
 		}
 	}
 }
