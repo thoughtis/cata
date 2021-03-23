@@ -53,34 +53,42 @@ if ( ! function_exists( 'cata_after_setup_theme' ) ) :
 			array(
 				array(
 					'name'  => 'White',
+					'slug'  => 'white',
 					'color' => '#FFFFFF',
 				),
 				array(
-					'name'  => 'Gray-lightest',
+					'name'  => 'Gray Lightest',
+					'slug'  => 'gray-lightest',
 					'color' => '#fcfcfc',
 				),
 				array(
-					'name'  => 'Gray-lighter',
+					'name'  => 'Gray Lighter',
+					'slug'  => 'gray-lighter',
 					'color' => '#f8f8f8',
 				),
 				array(
-					'name'  => 'Gray-light',
+					'name'  => 'Gray Light',
+					'slug'  => 'gray-light',
 					'color' => '#dadada',
 				),
 				array(
-					'name'  => 'Gray-dark',
+					'name'  => 'Gray Dark',
+					'slug'  => 'gray-dark',
 					'color' => '#848484',
 				),
 				array(
-					'name'  => 'Gray-darker',
+					'name'  => 'Gray Darker',
+					'slug'  => 'gray-darker',
 					'color' => '#2b2b2b',
 				),
 				array(
-					'name'  => 'Gray-darkest',
+					'name'  => 'Gray Darkest',
+					'slug'  => 'gray-darkest',
 					'color' => '#0a0a0a',
 				),
 				array(
 					'name'  => 'Black',
+					'slug'  => 'black',
 					'color' => '#000000',
 				),
 			) 

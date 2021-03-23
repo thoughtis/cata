@@ -6,7 +6,7 @@
 
 	background-size: cover;
 	background-position: center center;
-	color: var( --color-background );
+	color: @gray-lightest;
 	inline-size: 100%;
 	block-size: 100%;
 	position: relative;
@@ -29,21 +29,20 @@
 	}
 
 	&.has-background-dim {
+
+		background-color: @black;
+
 		&:before {
 			content: "";
-			background-color: var( --color-text );
+			background-color: inherit;
 			display: block;
 			position: absolute;
 			top: 0;
 			left: 0;
 			inline-size: 100%;
 			block-size: 100%;
-			opacity: 0.25;
+			opacity: 0.50;
 			z-index: 2;
-		}
-
-		&[style*=background-color]:before {
-			background-color:inherit;
 		}
 	}
 
@@ -100,7 +99,7 @@
 	}
 
 	&.has-background-dim {
-		each( range(9), {
+		each( range(10), {
 			&.has-background-dim-@{value}0 {
 				> span {
 					opacity: ( @value * 0.1 );
