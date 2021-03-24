@@ -7,6 +7,7 @@
 
 namespace Cata;
 
+new Blocks\Core_Button();
 new Custom_Formats\Mark();
 new Enqueue_Assets();
 new Images\Block_Image_Sizes\Setter(
