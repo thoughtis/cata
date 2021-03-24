@@ -51,51 +51,7 @@ if ( ! function_exists( 'cata_after_setup_theme' ) ) :
 
 		add_theme_support( 'disable-custom-font-sizes' );
 		add_theme_support( 'disable-custom-colors' );
-		add_theme_support( 
-			'editor-color-palette', 
-			array(
-				array(
-					'name'  => 'White',
-					'slug'  => 'white',
-					'color' => '#FFFFFF',
-				),
-				array(
-					'name'  => 'Gray Lightest',
-					'slug'  => 'gray-lightest',
-					'color' => '#fcfcfc',
-				),
-				array(
-					'name'  => 'Gray Lighter',
-					'slug'  => 'gray-lighter',
-					'color' => '#f8f8f8',
-				),
-				array(
-					'name'  => 'Gray Light',
-					'slug'  => 'gray-light',
-					'color' => '#dadada',
-				),
-				array(
-					'name'  => 'Gray Dark',
-					'slug'  => 'gray-dark',
-					'color' => '#848484',
-				),
-				array(
-					'name'  => 'Gray Darker',
-					'slug'  => 'gray-darker',
-					'color' => '#2b2b2b',
-				),
-				array(
-					'name'  => 'Gray Darkest',
-					'slug'  => 'gray-darkest',
-					'color' => '#0a0a0a',
-				),
-				array(
-					'name'  => 'Black',
-					'slug'  => 'black',
-					'color' => '#000000',
-				),
-			) 
-		);
+		add_theme_support( 'editor-color-palette', array() );
 
 		add_theme_support( 
 			'editor-font-sizes', 
