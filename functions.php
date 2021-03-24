@@ -46,6 +46,9 @@ if ( ! function_exists( 'cata_after_setup_theme' ) ) :
 		add_theme_support( 'wc-product-gallery-lightbox' );
 		add_theme_support( 'wc-product-gallery-slider' );
 
+		add_theme_support( 'disable-custom-gradients' );
+		add_theme_support( 'editor-gradient-presets', array() );
+
 		add_theme_support( 'disable-custom-font-sizes' );
 		add_theme_support( 'disable-custom-colors' );
 		add_theme_support( 
