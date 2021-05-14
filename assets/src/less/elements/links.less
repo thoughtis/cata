@@ -1,10 +1,10 @@
-a {
+a:not([class]) {
 	color: currentColor;
 	
 	&:link{
 		color: var(--color-accent);
 		&:hover, &:active, &:focus {
-			color: var(--color-accent-emphasized);	
+			color: var(--color-accent-emphasized);
 		}
 	}
 	

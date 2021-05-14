@@ -5,13 +5,38 @@
  .wp-block-button {
 
 	.wp-block-button__link {
-		.button.is-primary();
-		.button.is-filled();
+
+		border-color: transparent;
+
+		&:not(.has-background) {
+			background-color: var(--color-button);
+		}
+		
+		&:not(.has-text-color) {
+			color: var(--color-background);
+		}
+
+		&:link, &:visited {
+			&:hover, &:active, &:focus {
+				filter: saturate(1.25) contrast(1.25);
+			}
+		}
+
 	}
 
 	&.is-style-outline {
 		.wp-block-button__link {
-			.button.is-outlined();
+
+			border-color: currentColor;
+
+			&:not(.has-background) {
+				background-color: inherit;
+			}
+			
+			&:not(.has-text-color) {
+				color: var(--color-button);
+			}
+
 		}
 	}
 
