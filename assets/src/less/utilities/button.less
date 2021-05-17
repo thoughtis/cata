@@ -3,47 +3,8 @@
  */
 
 .button {
-	appearance: none;
-	border: 0.125em solid currentColor;
-	border-radius: @space-1 / 2;
-	color: var(--color-button);
-	display: inline-block;
-	line-height: 1;
-	padding: @space-1 @space-2;
-	text-decoration: none;
-
-	&.is-disabled,
-	&.disabled,
-	&:disabled {
-		cursor: unset;
-		pointer-events: none;
-		opacity: 0.625;
-	}
-
-	&:link, &:visited {
-		color: var(--color-button);
-	}
-
-	&:hover,
-	&:active,
-	&:focus {
-		color: var(--color-button-interactive);
-		border-color: var(--color-button-interactive);
-	}
-
-	&:link, &:visited {
-		&:hover,
-		&:active,
-		&:focus {
-			color: var(--color-button-interactive);
-			border-color: var(--color-button-interactive);
-		}
-	}
-
-	&:active {
-		transform: translateY(0.125em);
-	}
-
+	.button-layout();
+	.button-theme();
 }
 
 .button.has-icon {
@@ -86,13 +47,8 @@
 	background-color: var(--color-button);
 	border-color: transparent;
 	color: var(--color-background);
-	&:link, &:visited {
+	&:visited {
 		color: var(--color-background);
-		&:hover, &:active, &:focus {
-			background-color: var(--color-button-interactive);
-			color: var(--color-background-contrast-high);
-			border-color: transparent;
-		}
 	}
 	&:hover, &:active, &:focus {
 		background-color: var(--color-button-interactive);
@@ -110,14 +66,8 @@
 	background-color: inherit;
 	border-color: currentColor;
 	color: var(--color-button);
-	&:link, &:visited {
+	&:visited {
 		color: var(--color-button);
-		&:hover,
-		&:active,
-		&:focus {
-			color: var(--color-button-interactive);
-			border-color: var(--color-button-interactive);
-		}
 	}
 	&:hover,
 	&:active,
