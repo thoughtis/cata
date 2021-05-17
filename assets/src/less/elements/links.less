@@ -1,17 +1,12 @@
 a:not([class]) {
-	color: currentColor;
-	
-	&:link{
-		color: var(--color-accent);
-		&:hover, &:active, &:focus {
-			color: var(--color-accent-emphasized);
-		}
-	}
-	
+
+	color: var(--color-accent);
+
 	&:visited {
 		color: var(--color-accent-deemphasized);
-		&:hover, &:active, &:focus {
-			color: var(--color-accent-emphasized);
-		}
+	}
+
+	&:hover, &:active, &:focus {
+		color: var(--color-accent-emphasized);
 	}
 }
