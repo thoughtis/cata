@@ -83,7 +83,8 @@ if ( ! function_exists( 'cata_after_setup_theme' ) ) :
 				),
 			) 
 		);
-
+		
+		remove_theme_support( 'core-block-patterns' );
 	}
 endif;
 add_action( 'after_setup_theme', 'cata_after_setup_theme' );
