@@ -2,45 +2,82 @@
  * wp-block-columns
  */
 
+/*
+< 36.5em
+	1 column
+36.5em <> 60em 
+	default width blocks, nowrap
+	wide and full width blocks, wrap
+> 60em
+	nowrap
+*/
+
 .wp-block-columns {
-
 	display: flex;
-	justify-content: space-between;
-	margin-block-start: 0;
-	
+	flex-wrap: wrap;
+	margin-block-start: @space-2;
+	.margin-inline( -@space-1 );
+
+	&.has-background {
+		padding: @space-2;
+	}
+
+	&.are-vertically-aligned-top {
+		align-items: flex-start;
+	}
+	&.are-vertically-aligned-center {
+		align-items: center;
+	}
+	&.are-vertically-aligned-bottom {
+		align-items: flex-end;
+	}
+}
+
+.wp-block-column {
+	flex-basis: 50%;
+	flex-grow: 1;
+	inline-size: 100%;
+	margin-block-start: @space-2;
+	.padding-inline( @space-1 );
+	.stack--tight();
+	&[style*=flex-basis] {
+		flex-grow: 0;
+	}
+
+	&.is-vertically-aligned-top {
+		align-self: flex-start;
+	}
+
+	&.is-vertically-aligned-center {
+		align-self: center;
+	}
+
+	&.is-vertically-aligned-bottom {
+		align-self: flex-end;
+	}
+}
+
+@media( max-width: @default-block-equals-content-width ) {
 	.wp-block-column {
-		overflow-wrap: break-word;
-		
-		.stack;
-		margin-block-start: @row-gap;
-
-		&.is-vertically-aligned-top {
-			align-self: flex-start;
-		}
-		&.is-vertically-aligned-center {
-			align-self: center;
-		}
-		&.is-vertically-aligned-bottom {
-			align-self: flex-end;
-		}
-
+		flex-basis: 100% !important;
 	}
+}
 
-	each(range(2,6), {
-		&.has-@{value}-columns {
-			.wp-block-column {
-				flex-basis: ( 100% / @value ) - ( ( ( @value - 1 ) / @value ) * @column-gap-relative );
-			}
-		}
-	});
-
-	&.is-stacked-on-mobile {
-		@media( max-width: 48em ) {
+@media( min-width: @default-block-equals-content-width ) {
+	.wp-block-columns {
+		flex-wrap: nowrap;
+		&.alignwide,
+		&.alignfull {
 			flex-wrap: wrap;
-			.wp-block-column {	
-				flex-basis: 100%;
-			}
 		}
 	}
+}
 
+@media( min-width: 60em ) {
+	.wp-block-columns {
+		&.alignwide,
+		&.alignfull {
+			flex-wrap: nowrap;
+		}
+	}
 }
