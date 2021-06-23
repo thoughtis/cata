@@ -16,13 +16,25 @@
 		margin-inline-end: 0;
 	}
 
+	/**
+	 * Assume alignwide or alignfull means this is a big table,
+	 * and we'll need to enforce some minimums to keep it legible on mobile.
+	 * Fixed layout will override this.
+	 */
+	&.alignwide,
+	&.alignfull {
+		table td, th {
+			min-inline-size: 28ch;
+		}
+	}
+
 	.has-fixed-layout {
 		table-layout: fixed;
 	}
 
 	table td, th {
 		border: 0.0625em solid;
-		padding: 0.125em;
+		padding: @space-1;
 	}
 
 }
