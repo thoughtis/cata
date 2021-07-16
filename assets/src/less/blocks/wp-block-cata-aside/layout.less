@@ -2,12 +2,14 @@
  * Aside
  */
 
+// Padding is split up so .has-background doesn't change layout.
 .wp-block-cata-aside {
-	border: dashed 0.125em currentColor;	
+	border: dashed 0.125em currentColor;
+	padding: @space-2;
 }
 
 .wp-block-cata-aside__inner-container {
-	padding: @space-3;
+	padding: @space-2;
 
 	> * + * {
 		margin-block-start: @space-3;
