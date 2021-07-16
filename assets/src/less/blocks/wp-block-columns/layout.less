@@ -15,12 +15,7 @@
 .wp-block-columns {
 	display: flex;
 	flex-wrap: wrap;
-	margin-block-start: @space-2;
-	.margin-inline( -@space-1 );
-
-	&.has-background {
-		padding: @space-2;
-	}
+	gap: @space-2;
 
 	&.are-vertically-aligned-top {
 		align-items: flex-start;
@@ -37,8 +32,6 @@
 	flex-basis: 50%;
 	flex-grow: 1;
 	inline-size: 100%;
-	margin-block-start: @space-2;
-	.padding-inline( @space-1 );
 	.stack--tight();
 	&[style*=flex-basis] {
 		flex-grow: 0;
