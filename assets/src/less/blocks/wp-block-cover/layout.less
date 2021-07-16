@@ -7,11 +7,17 @@
 	background-size: cover;
 	background-position: center center;
 	color: @gray-lightest;
-	inline-size: 100%;
-	block-size: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	padding: @space-3;
 	position: relative;
 
 	min-block-size: 52.03125vw;
+
 	@media( min-width: @default-block-equals-content-width ) {
 		min-block-size: 18em;
 	}
@@ -47,15 +53,9 @@
 	}
 
 	.wp-block-cover__inner-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		position: absolute;
-		inline-size: 100%;
-		block-size: 100%;
+		position: relative;
 		z-index: 3;
-		.stack--tight;
-		padding: @space-3;
+		.stack--tight();
 	}
 
 	&.alignleft {
@@ -107,57 +107,39 @@
 	}
 
 	&.is-position-top-left {
-		.wp-block-cover__inner-container {
-			justify-content: flex-start;
-			align-items: flex-start;
-		}
+		justify-content: flex-start;
+		align-items: flex-start;
 	}
 
 	&.is-position-top-center {
-		.wp-block-cover__inner-container {
-			justify-content: flex-start;
-		}
+		justify-content: flex-start;
 	}
 
 	&.is-position-top-right {
-		.wp-block-cover__inner-container {
-			justify-content: flex-start;
-			align-items: flex-end;
-		}
+		justify-content: flex-start;
+		align-items: flex-end;
 	}
 
 	&.is-position-center-left {
-		.wp-block-cover__inner-container {
-			align-items: flex-start;
-		}
+		align-items: flex-start;
 	}
 
-	// unpositioned content / "middle" content has no class for positioning
-
 	&.is-position-center-right {
-		.wp-block-cover__inner-container {
-			align-items: flex-end;
-		}
+		align-items: flex-end;
 	}
 
 	&.is-position-bottom-left {
-		.wp-block-cover__inner-container {
-			justify-content: flex-end;
-			align-items: flex-start;
-		}
+		justify-content: flex-end;
+		align-items: flex-start;
 	}
 
 	&.is-position-bottom-center {
-		.wp-block-cover__inner-container {
-			justify-content: flex-end;
-		}
+		justify-content: flex-end;
 	}
 
 	&.is-position-bottom-right {
-		.wp-block-cover__inner-container {
-			justify-content: flex-end;
-			align-items: flex-end;
-		}
+		justify-content: flex-end;
+		align-items: flex-end;
 	}
 
 }
