@@ -1,0 +1,68 @@
+{
+    "version": 1,
+    "settings": {
+		"custom" : {
+			"contentSize": "36rem",
+			"wideSize": "54rem"
+		},
+		"color": {
+			"custom": false,
+			"customDuotone": false,
+			"customGradient": false,
+			"duotone": [],
+			"gradients": [],
+			"link": false,
+			"palette": []
+		},
+		"layout": {
+			"contentSize": "var(--wp--custom--content-size, 36rem)",
+			"wideSize": "var(--wp--custom--wide-size, 54rem)"
+		},
+		"spacing": {
+            "customMargin": false,
+            "customPadding": false,
+			"units": [ "em", "rem" ]
+		},
+		"typography": {
+            "customFontSize": false,
+            "customLineHeight": false,
+            "dropCap": false,
+            "fontSizes": [
+				{
+					"name": "Extra Small",
+					"size": "0.75em",
+					"slug": "extra-small"
+				},
+				{
+					"name": "Small",
+					"size": "0.875em",
+					"slug": "small"
+				},
+				{
+					"name": "Regular",
+					"size": "1rem",
+					"slug": "regular"
+				},
+				{
+					"name": "Medium ( H5 )",
+					"size": "1.125em",
+					"slug": "medium"
+				},
+				{
+					"name": "Large ( H3 )",
+					"size": "1.375em",
+					"slug": "large"
+				},
+				{
+					"name": "Huge ( H1 )",
+					"size": "2em",
+					"slug": "huge"
+				}
+			]
+        }
+	},
+    "styles": {},
+    "customTemplates": {},
+    "templateParts": {},
+	"blocks": {}
+}
