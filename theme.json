@@ -2,8 +2,8 @@
     "version": 1,
     "settings": {
 		"custom" : {
-			"contentSize": "36rem",
-			"wideSize": "54rem"
+			"contentSize": "32rem",
+			"wideSize": "64rem"
 		},
 		"color": {
 			"custom": false,
@@ -15,8 +15,8 @@
 			"palette": []
 		},
 		"layout": {
-			"contentSize": "var(--wp--custom--content-size, 36rem)",
-			"wideSize": "var(--wp--custom--wide-size, 54rem)"
+			"contentSize": "var(--wp--custom--content-size, 32rem)",
+			"wideSize": "var(--wp--custom--wide-size, 64rem)"
 		},
 		"spacing": {
             "customMargin": false,
