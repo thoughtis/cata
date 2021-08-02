@@ -1,6 +1,6 @@
 {
-    "version": 1,
-    "settings": {
+	"version": 1,
+	"settings": {
 		"custom" : {
 			"contentSize": "32rem",
 			"wideSize": "64rem"
@@ -19,15 +19,15 @@
 			"wideSize": "var(--wp--custom--wide-size, 64rem)"
 		},
 		"spacing": {
-            "customMargin": false,
-            "customPadding": false,
+			"customMargin": false,
+			"customPadding": false,
 			"units": [ "em", "rem" ]
 		},
 		"typography": {
-            "customFontSize": false,
-            "customLineHeight": false,
-            "dropCap": false,
-            "fontSizes": [
+			"customFontSize": false,
+			"customLineHeight": false,
+			"dropCap": false,
+			"fontSizes": [
 				{
 					"name": "Extra Small",
 					"size": "0.75em",
@@ -59,10 +59,10 @@
 					"slug": "huge"
 				}
 			]
-        }
+		}
 	},
-    "styles": {},
-    "customTemplates": {},
-    "templateParts": {},
+	"styles": {},
+	"customTemplates": {},
+	"templateParts": {},
 	"blocks": {}
 }
