@@ -39,9 +39,9 @@
 					"slug": "small"
 				},
 				{
-					"name": "Regular",
+					"name": "Normal",
 					"size": "1rem",
-					"slug": "regular"
+					"slug": "normal"
 				},
 				{
 					"name": "Medium ( H5 )",
