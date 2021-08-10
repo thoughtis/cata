@@ -2,16 +2,6 @@
  * wp-block-columns
  */
 
-/*
-< 36.5em
-	1 column
-36.5em <> 60em 
-	default width blocks, nowrap
-	wide and full width blocks, wrap
-> 60em
-	nowrap
-*/
-
 .wp-block-columns {
 	display: flex;
 	flex-wrap: wrap;
@@ -47,30 +37,5 @@
 
 	&.is-vertically-aligned-bottom {
 		align-self: flex-end;
-	}
-}
-
-@media( max-width: @default-block-equals-content-width ) {
-	.wp-block-column {
-		flex-basis: 100% !important;
-	}
-}
-
-@media( min-width: @default-block-equals-content-width ) {
-	.wp-block-columns {
-		flex-wrap: nowrap;
-		&.alignwide,
-		&.alignfull {
-			flex-wrap: wrap;
-		}
-	}
-}
-
-@media( min-width: 60em ) {
-	.wp-block-columns {
-		&.alignwide,
-		&.alignfull {
-			flex-wrap: nowrap;
-		}
 	}
 }

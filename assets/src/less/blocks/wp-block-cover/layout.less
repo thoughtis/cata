@@ -16,24 +16,6 @@
 	padding: @space-3;
 	position: relative;
 
-	min-block-size: 52.03125vw;
-
-	@media( min-width: @default-block-equals-content-width ) {
-		min-block-size: 18em;
-	}
-
-	&.alignwide {
-		min-block-size: 52.03125vw;
-		@media( min-width: @wide-block-equals-content-width ) {
-			min-block-size: 36em;
-		}
-	}
-
-	&.alignfull {
-		inline-size: auto;
-		min-block-size: 56.25vw;
-	}
-
 	&.has-background-dim {
 
 		background-color: @black;
