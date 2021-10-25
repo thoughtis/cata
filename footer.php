@@ -12,7 +12,7 @@
 <footer class="footer" id="footer" role="contentinfo">
 	<p>
 	<?php if ( function_exists( 'vip_powered_wpcom' ) ) : ?>
-		<?php echo wp_kses_posty( vip_powered_wpcom() ); ?>
+		<?php echo wp_kses_post( vip_powered_wpcom() ); ?>
 	<?php else : ?>
 		<a href="<?php echo esc_url( __( 'https://wordpress.org', 'cata' ) ); ?>">
 			<?php
