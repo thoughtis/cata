@@ -46,7 +46,8 @@ function taskLess( done ) {
 				'button:-moz-focusring',
 				'[type=button]:-moz-focusring',
 				'[type=reset]:-moz-focusring',
-				'[type=submit]:-moz-focusring'
+				'[type=submit]:-moz-focusring',
+				'[type=search]'
 			]
 		})
 	];
