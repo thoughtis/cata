@@ -1,5 +1,31 @@
 input, select, textarea {
 	border: 0.0625em solid var(--color-text-contrast-AA);
 	border-radius: @space-1 / 2;
-	padding: @space-1 / 2;
+}
+
+input {
+	.padding-block( @space-1 / 2 );
+	
+	// indent all text-like inputs.
+	&[type=email],
+	&[type=number],
+	&[type=password],
+	&[type=search],
+	&[type=tel],
+	&[type=text],
+	&[type=url] {
+		text-indent: @space-1;
+	}
+}
+
+select {
+	.padding-inline( @space-1 / 2 );
+}
+
+textarea {
+	padding: @space-1;
+
+	// contain textarea horizontally
+	max-inline-size: 100%;
+	resize: vertical;
 }
