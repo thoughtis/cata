@@ -1,5 +1,6 @@
 {
 	"version": 1,
+	"customTemplates": [],
 	"settings": {
 		"custom" : {
 			"contentSize": "32rem",
@@ -12,6 +13,8 @@
 			"duotone": [],
 			"gradients": [],
 			"link": false,
+			"defaultPalette": false,
+			"defaultGradients": false,
 			"palette": []
 		},
 		"layout": {
@@ -19,9 +22,8 @@
 			"wideSize": "var(--wp--custom--wide-size, 64rem)"
 		},
 		"spacing": {
-			"customMargin": false,
-			"customPadding": false,
-			"units": [ "em", "rem" ]
+		
+			"units": [ "%", "em", "rem", "ch" ]
 		},
 		"typography": {
 			"customFontSize": false,
@@ -62,7 +64,5 @@
 		}
 	},
 	"styles": {},
-	"customTemplates": {},
-	"templateParts": {},
-	"blocks": {}
+	"templateParts": []
 }
