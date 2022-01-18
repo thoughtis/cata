@@ -23,7 +23,7 @@
 		},
 		"spacing": {
 		
-			"units": [ "%", "em", "rem", "ch" ]
+			"units": [ "em", "rem", "ch", "%" ]
 		},
 		"typography": {
 			"customFontSize": false,
