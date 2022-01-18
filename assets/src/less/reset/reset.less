@@ -6,19 +6,18 @@
 *,
 *:after,
 *:before {
-	box-sizing: inherit;
+	box-sizing: border-box;
 }
 
 html {
-	box-sizing: border-box;
-	line-height: 1.5;
-	font-size: 100%;
 	// 15px + 1px where 100vw = 320px 
 	font-size: calc( 0.9375em + 0.3125vw );
+	block-size: 100%;
 }
 
-figure {
-	margin: 0;
+body {
+	block-size: 100%;
+	line-height: 1.5;
 }
 
 img {
@@ -61,7 +60,7 @@ button {
 	}
 }
 
-fieldset {
+fieldset, figure {
 	margin: 0;
 }
 
@@ -70,7 +69,8 @@ hr, p, ul, ol, blockquote, pre {
 	margin-block-end: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,h2,h3,h4,h5,h6 {
+	line-height: calc( 1em + 0.5rem );
 	margin-block-start: 0;
 	margin-block-end: 0;
 }
