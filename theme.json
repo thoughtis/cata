@@ -1,10 +1,13 @@
 {
-	"version": 1,
+	"version": 2,
 	"customTemplates": [],
 	"settings": {
 		"custom" : {
 			"contentSize": "32rem",
 			"wideSize": "64rem"
+		},
+		"border": {
+			"radius": false
 		},
 		"color": {
 			"custom": false,
@@ -22,13 +25,20 @@
 			"wideSize": "var(--wp--custom--wide-size, 64rem)"
 		},
 		"spacing": {
-		
-			"units": [ "em", "rem", "ch", "%" ]
+			"margin": false,
+			"padding": false,
+			"blockGap": false,
+			"units": [ "em", "rem", "%" ]
 		},
 		"typography": {
 			"customFontSize": false,
 			"customLineHeight": false,
 			"dropCap": false,
+			"fontStyle": false,
+			"fontWeight": false,
+			"letterSpacing": false,
+			"textDecoration": false,
+			"textTransform": false,
 			"fontSizes": [
 				{
 					"name": "Extra Small",
@@ -41,11 +51,6 @@
 					"slug": "small"
 				},
 				{
-					"name": "Normal",
-					"size": "1rem",
-					"slug": "normal"
-				},
-				{
 					"name": "Medium ( H5 )",
 					"size": "1.125em",
 					"slug": "medium"
@@ -56,13 +61,36 @@
 					"slug": "large"
 				},
 				{
-					"name": "Huge ( H1 )",
+					"name": "Extra Large ( H1 )",
 					"size": "2em",
-					"slug": "huge"
+					"slug": "x-large"
+				}
+			],
+			"fontFamilies": [
+				{
+					"fontFamily": "Graphik, sans-serif",
+					"name": "Sans Serif",
+					"slug": "sans"
+				},
+				{
+					"fontFamily": "'PT Serif', serif",
+					"name": "Serif",
+					"slug": "serif"
 				}
 			]
 		}
 	},
-	"styles": {},
+	"styles": {
+		"spacing": {
+			"blockGap": "0.75em"
+		},
+		"blocks" : {
+			"core/button": {
+				"border": {
+					"radius": "0.1875em"
+				}
+			}
+		}
+	},
 	"templateParts": []
 }
