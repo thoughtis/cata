@@ -1,0 +1,26 @@
+/**
+ * wp-block-column
+ */
+.wp-block-column {
+
+	.stack--tight();
+	flex-grow: 1;
+
+// 	@todo why did we need these in the old version?
+//	flex-basis: 50%;
+//	inline-size: 100%;
+
+	&[style*=flex-basis] {
+		flex-grow: 0;
+	}
+
+	&.is-vertically-aligned-top {
+		align-self: flex-start;
+	}
+	&.is-vertically-aligned-center {
+		align-self: center;
+	}
+	&.is-vertically-aligned-bottom {
+		align-self: flex-end;
+	}
+}

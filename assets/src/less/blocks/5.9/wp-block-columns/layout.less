@@ -1,0 +1,50 @@
+/**
+ * wp-block-columns
+ */
+
+.wp-block-columns {
+
+	display: flex;
+	gap: var(--wp--style--block-gap, @space-2);
+
+/*
+	Handle media queries in child theme,
+	like this:
+	&.has-relative-units {
+		flex-wrap: wrap;
+		@media( min-width: @content-size-equals-screen-size ) {
+			flex-wrap: nowrap;
+			&.alignwide,
+			&.alignfull {
+				flex-wrap: wrap;
+			}
+		}
+		@media( min-width: @wide-size-equals-screen-size ) {
+			&.alignwide,
+			&.alignfull {
+				flex-wrap: nowrap;
+			}
+		}
+	}
+*/
+
+	&.has-static-units {
+		flex-wrap: wrap;
+	}
+
+	&.is-not-stacked-on-mobile {
+		flex-wrap: nowrap !important;
+	}
+
+	&.are-vertically-aligned-top {
+		align-items: flex-start;
+	}
+
+	&.are-vertically-aligned-center {
+		align-items: center;
+	}
+
+	&.are-vertically-aligned-bottom {
+		align-items: flex-end;
+	}
+}

@@ -1,0 +1,39 @@
+/**
+ * Button
+ */
+
+.wp-block-button {
+
+	&.has-custom-width {
+
+		.wp-block-button__link {
+			inline-size: 100%;
+			text-align: center;
+		}
+
+		&.wp-block-button__width-25 {
+			inline-size: calc(25% - var(--wp--style--block-gap, @space-2));
+		}
+
+		&.wp-block-button__width-50 {
+			inline-size: calc(50% - var(--wp--style--block-gap, @space-2));
+		}
+
+		&.wp-block-button__width-75 {
+			inline-size: calc(75% - var(--wp--style--block-gap, @space-2));
+		}
+
+		&.wp-block-button__width-100 {
+			inline-size: 100%;
+		}
+	}
+
+}
+
+.wp-block-button__link {
+	.button-layout();
+}
+
+.wp-block-button__link.no-border-radius {
+	border-radius: 0;
+}
