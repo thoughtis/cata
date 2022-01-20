@@ -29,17 +29,17 @@
 	}
 	
 	&.alignleft {
-		.float-inline-start;
+		.float-inline-start();
 		margin-inline-end: @space-2;
 		margin-block-end: @space-3;
-		.text-start;
+		.text-start();
 	}
 	
 	&.alignright {
-		.float-inline-end;
+		.float-inline-end();
 		margin-inline-start: @space-2;
 		margin-block-end: @space-3;
-		.text-end;
+		.text-end();
 	}
 
 }
@@ -47,7 +47,7 @@
 .wp-block-image figcaption,
 .wp-caption-text {
 	font-size: @fs-sm;
-	line-height: @line-height-2;
+	line-height: calc( 1em + 0.5rem );
 	margin-block-start: @space-1;
 }
 
@@ -58,13 +58,13 @@ img {
 	}
 	
 	&.alignleft {
-		.float-inline-start;
+		.float-inline-start();
 		margin-inline-end: @space-2;
 		margin-block-end: @space-3;
 	}
 	
 	&.alignright {
-		.float-inline-end;
+		.float-inline-end();
 		margin-inline-start: @space-2;
 		margin-block-end: @space-3;
 	}
