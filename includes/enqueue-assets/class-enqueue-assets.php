@@ -30,6 +30,8 @@ if ( ! class_exists( 'Cata\Enqueue_Assets' ) ) :
 		public static function dequeue_wp_block_styles() {
 			wp_dequeue_style( 'wp-block-library' );
 			wp_deregister_style( 'wp-block-library' );
+
+			wp_enqueue_style( 'cata-wp-block-library', get_template_directory_uri() . '/assets/dist/css/wp-block-library.css', array(), wp_get_theme( 'cata' )->get( 'Version' ), 'screen' );
 		}
 
 		/**

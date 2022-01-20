@@ -16,6 +16,7 @@ const postcssClean = require( 'postcss-clean' );
 const rollup       = require( 'gulp-better-rollup' );
 const rollupBabel  = require( '@rollup/plugin-babel' );
 const cssByeBye    = require( 'css-byebye' );
+const concat       = require( 'gulp-concat' );
 
 /**
  * Task: LESS
@@ -63,6 +64,53 @@ function taskLess( done ) {
 
 }
 gulp.task( 'less', taskLess );
+
+/**
+ * WordPress
+ * Make a CSS file for the blocks we haven't implemented in Cata yet.
+ * 
+ * @param {function} done
+ */
+function taskWordPress( done ) {
+
+	const files = [
+		'archives/style',
+		'cover/style',
+		'latest-comments/style',
+		'latest-posts/style',
+		'navigation/style',
+		'navigation-link/style',
+		'page-list/style',
+		'post-author/style',
+		'post-comments/style',
+		'post-excerpt/style',
+		'post-featured-image/style',
+		'post-template/style',
+		'post-terms/style',
+		'post-title/style',
+		'query-pagination/style',
+		'rss/style',
+		'search/style',
+		'search/theme',
+		'site-logo/style',
+		'social-links/style',
+		'spacer/style',
+		'tag-cloud/style',
+		'text-columns/style'
+	];
+
+	const paths = files.map( ( file ) => {
+		return `../../../wp-includes/blocks/${file}.min.css`
+	} );
+
+	gulp
+		.src( paths )
+		.pipe( concat( 'wp-block-library.css' ) )
+		.pipe( gulp.dest( './assets/dist/css' ))
+
+	done();
+}
+gulp.task( 'wordpress', taskWordPress );
 
 /**
  * Task: Less Watch
