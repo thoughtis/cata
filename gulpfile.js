@@ -74,7 +74,6 @@ gulp.task( 'less', taskLess );
 function taskWordPress( done ) {
 
 	const files = [
-		'archives/style',
 		'cover/style',
 		'latest-comments/style',
 		'latest-posts/style',
