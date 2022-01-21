@@ -49,6 +49,9 @@
 	> .alignfull {
 		max-inline-size: none;
 		.margin-inline( -@space-vw-2 );
+
+		// specifically for blocks where width/inline-size is defined as 100%
+		inline-size: auto;
 	}
 
 	> .woocommerce {
