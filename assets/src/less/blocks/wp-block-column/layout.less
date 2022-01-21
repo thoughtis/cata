@@ -6,13 +6,12 @@
 	.stack--tight();
 	flex-grow: 1;
 
-// 	@todo why did we need these in the old version?
-//	flex-basis: 50%;
-	inline-size: 100%;
+	// helps when only one column has a user defined flex-basis.
+	flex-basis: 50%;
 
-	&[style*=flex-basis] {
-		flex-grow: 0;
-	}
+	// helps when content-types are mixed and flex-basis is not set,
+	// for example two-column paragraph and image.
+	inline-size: 100%;
 
 	&.is-vertically-aligned-top {
 		align-self: flex-start;
