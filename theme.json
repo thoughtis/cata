@@ -65,18 +65,6 @@
 					"size": "2em",
 					"slug": "x-large"
 				}
-			],
-			"fontFamilies": [
-				{
-					"fontFamily": "Graphik, sans-serif",
-					"name": "Sans Serif",
-					"slug": "sans"
-				},
-				{
-					"fontFamily": "'PT Serif', serif",
-					"name": "Serif",
-					"slug": "serif"
-				}
 			]
 		}
 	},
