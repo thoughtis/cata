@@ -74,6 +74,10 @@ class Core_Columns {
 				if ( ! isset( $current['attrs']['width'] ) ) {
 					return $previous;
 				}
+				// width is empty.
+				if ( empty( $current['attrs']['width'] ) ) {
+					return $previous;
+				}
 				// whether percentage symbol is last character in width.
 				return '%' === substr( $current['attrs']['width'], -1 );
 			},
