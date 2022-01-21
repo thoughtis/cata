@@ -7,9 +7,9 @@
 
 namespace Cata;
 
-new Blocks\Core_Button();
 new Blocks\Core_Columns();
-new Blocks\Core_Group();
+new Blocks\Experimental\Border();
+new Blocks\Experimental\Font_Family();
 new Custom_Formats\Mark();
 new Enqueue_Assets();
 new Images\Block_Image_Sizes\Setter(

@@ -6,9 +6,6 @@
 			"contentSize": "32rem",
 			"wideSize": "64rem"
 		},
-		"border": {
-			"radius": false
-		},
 		"color": {
 			"custom": false,
 			"customDuotone": false,
