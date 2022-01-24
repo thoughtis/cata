@@ -1,6 +1,6 @@
 {
   "name": "cata",
-  "version": "0.6.4",
+  "version": "0.7.0-beta6",
   "description": "WordPress theme, initially designed for Shop Catalog.",
   "main": "index.js",
   "scripts": {
@@ -23,11 +23,14 @@
     "@rollup/plugin-babel": "^5.2.2",
     "@wordpress/eslint-plugin": "^2.4.0",
     "autoprefixer": "^9.8.6",
+    "axios": "^0.21.2",
     "babel-preset-minify": "^0.5.1",
     "browser-sync": "^2.26.14",
     "css-byebye": "^2.0.2",
+    "glob-parent": "^5.1.2",
     "gulp": "^4.0.2",
     "gulp-better-rollup": "^4.0.1",
+    "gulp-concat": "^2.6.1",
     "gulp-eslint": "^6.0.0",
     "gulp-less": "^4.0.1",
     "gulp-postcss": "^9.0.0",
@@ -36,8 +39,6 @@
     "postcss": "^8.2.15",
     "postcss-clean": "^1.2.1",
     "rollup": "^1.32.1",
-    "set-value": "^4.0.1",
-    "axios": "^0.21.2",
-    "glob-parent": "^5.1.2"
+    "set-value": "^4.0.1"
   }
 }

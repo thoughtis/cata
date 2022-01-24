@@ -5,6 +5,7 @@
 	.margin-inline(0);
 	// normal spacing multiplied by the amount we'll scale() the quotation marks.
 	padding-inline-start: 1.125em;
+	line-height: calc( 1em + 0.5rem );
 
 	&.is-style-large {
 		font-size: @fs-h4;
@@ -30,6 +31,13 @@
 		font-size: @fs-sm;
 		&:before {
 			content: "—";
+		}
+	}
+
+	&.is-style-plain {
+		p:first-of-type:before,
+		p:last-of-type:after {
+			content: none;
 		}
 	}
 

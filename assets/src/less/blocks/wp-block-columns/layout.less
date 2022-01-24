@@ -3,39 +3,48 @@
  */
 
 .wp-block-columns {
+
 	display: flex;
-	flex-wrap: wrap;
-	gap: @space-2;
+	gap: var(--wp--style--block-gap, @space-2);
+
+/*
+	Handle media queries in child theme,
+	like this:
+	&.has-relative-units {
+		flex-wrap: wrap;
+		@media( min-width: @content-size-equals-screen-size ) {
+			flex-wrap: nowrap;
+			&.alignwide,
+			&.alignfull {
+				flex-wrap: wrap;
+			}
+		}
+		@media( min-width: @wide-size-equals-screen-size ) {
+			&.alignwide,
+			&.alignfull {
+				flex-wrap: nowrap;
+			}
+		}
+	}
+*/
+
+	&.has-static-units {
+		flex-wrap: wrap;
+	}
+
+	&.is-not-stacked-on-mobile {
+		flex-wrap: nowrap !important;
+	}
 
 	&.are-vertically-aligned-top {
 		align-items: flex-start;
 	}
+
 	&.are-vertically-aligned-center {
 		align-items: center;
 	}
+
 	&.are-vertically-aligned-bottom {
 		align-items: flex-end;
-	}
-}
-
-.wp-block-column {
-	flex-basis: 50%;
-	flex-grow: 1;
-	inline-size: 100%;
-	.stack--tight();
-	&[style*=flex-basis] {
-		flex-grow: 0;
-	}
-
-	&.is-vertically-aligned-top {
-		align-self: flex-start;
-	}
-
-	&.is-vertically-aligned-center {
-		align-self: center;
-	}
-
-	&.is-vertically-aligned-bottom {
-		align-self: flex-end;
 	}
 }
