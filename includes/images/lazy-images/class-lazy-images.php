@@ -22,13 +22,13 @@ class Lazy_Images {
 
 	/**
 	 * Update Lazy Image Actions
-	 * Setup Lazy Images later to avoid it being removed by action on admin_bar_menu.
-	 * 
-	 * @link https://github.com/Automattic/jetpack/issues/15354
+	 *
+	 * Using an action on `the_post` causes setup_filters to run multiple times per page,
+	 * which breaks out placeholders. Using `wp_body_open` ensures it happens only once.
 	 */
 	public static function update_lazy_image_actions() : void {
 		$lazy_images = Jetpack_Lazy_Images::instance();
-		remove_action( 'wp_head', array( $lazy_images, 'setup_filters' ), 9999 );
+		remove_action( 'the_post', array( $lazy_images, 'setup_filters' ), 9999 );
 		add_action( 'wp_body_open', array( $lazy_images, 'setup_filters' ) );
 	}
 
