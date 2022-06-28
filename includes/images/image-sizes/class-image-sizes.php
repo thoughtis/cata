@@ -28,6 +28,7 @@ class Image_Sizes {
 	public function __construct( Content_Width $content_width ) {
 		$this->content_width = $content_width;
 		add_action( 'after_setup_theme', array( $this, 'update_image_sizes' ) );
+		add_action( 'after_setup_theme', array( $this, 'add_image_sizes' ) );
 		add_filter( 'image_size_names_choose', array( $this, 'get_editor_image_sizes' ) );
 	}
 
@@ -63,6 +64,23 @@ class Image_Sizes {
 		add_theme_support( 'post-thumbnails' );
 		set_post_thumbnail_size( $__return_1280() );
 
+	}
+
+	/**
+	 * Add Image Sizes
+	 * Custom image sizes as opposed to the pre-named sizes in `update_image_sizes`
+	 */
+	public function add_image_sizes() : void {
+		/**
+		 * 2x1 cropped sizes for social images
+		 */
+		$sm = $this->content_width->smallest_unit * 3;
+		$md = $this->content_width->smallest_unit * 6;
+		$lg = $this->content_width->smallest_unit * 12;
+
+		add_image_size( 'cata_2x1_sm', $sm, ($sm / 2), true );	
+		add_image_size( 'cata_2x1_md', $md, ($md / 2), true );
+		add_image_size( 'cata_2x1_lg', $lg, ($lg / 2), true );
 	}
 
 	/**
