@@ -23,7 +23,7 @@ class Placeholders {
 			return;
 		}
 
-		if ( is_feed() || is_preview() ) {
+		if ( is_feed() || is_preview() || is_embed() ) {
 			return;
 		}
 

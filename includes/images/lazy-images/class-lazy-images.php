@@ -18,6 +18,7 @@ class Lazy_Images {
 	 */
 	public function __construct() {
 		add_action( 'wp_head', array( __CLASS__, 'update_lazy_image_actions' ) );
+		add_filter( 'lazyload_is_enabled', array( __CLASS__, 'disable_lazy_images' ) );
 	}
 
 	/**
@@ -32,4 +33,15 @@ class Lazy_Images {
 		add_action( 'wp_body_open', array( $lazy_images, 'setup_filters' ) );
 	}
 
+	/**
+	 * Disable Lazy Images
+	 * `the_post` action happens on embeds, setting up lazy images,
+	 * but the required js assets are not enqueued.
+	 *
+	 * @param bool $enabled
+	 * @return bool
+	 */
+	public static function disable_lazy_images( bool $enabled ) : bool {
+		return is_embed() ? false : $enabled;
+	}
 }
