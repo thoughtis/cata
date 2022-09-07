@@ -2,7 +2,7 @@
  * .wp-block-button
  */
 
- .wp-block-button {
+.wp-block-button {
 
 	.wp-block-button__link {
 
@@ -35,6 +35,57 @@
 				color: var(--color-button);
 			}
 
+		}
+	}
+
+}
+
+// div
+.wp-block-button.is-style-streaming {
+
+	// a
+	.wp-block-button__link {
+
+		box-shadow: -0.125em 0.125em 0 var(--color-background), -0.25em 0.25em 0 currentColor;
+		transition: box-shadow 100ms linear;
+
+		&:hover {
+			box-shadow: 0 0 0 var(--color-background), 0 0 0 currentColor;
+		}
+
+		&:active, &:focus, &:hover {
+			filter: saturate(1.25) contrast(1.25);
+		}
+
+		&:not(.has-background) {
+			border-color: inherit;
+			background-color: transparent;
+		}
+
+		&.has-background {
+			position: relative;
+			box-shadow: none;
+
+			&::before {
+				content: "";
+				position: absolute;
+				width: calc( 100% + 0.375em );
+				height: calc( 100% + 0.375em );
+				inset-inline-end: 0;
+		 		inset-block-start: 0;
+				background-color: inherit;
+				z-index: -1;
+				border-radius: ~"0.625em 0.25em 0.5em 0.1875em / 0.5em 0.25em 0.625em 0.1875em";
+				transition: width 100ms linear, height 100ms linear;
+				clip-path: polygon(.125em 0,0 0,0 100%,100% 100%,100% calc(100% - .125em),.125em calc(100% - .125em));
+			}
+
+			&:hover {
+				&::before {
+					width: 100%;
+					height: 100%;
+				}
+			}
 		}
 	}
 
