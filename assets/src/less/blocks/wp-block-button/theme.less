@@ -53,13 +53,13 @@
 			box-shadow: 0 0 0 var(--color-background), 0 0 0 currentColor;
 		}
 
-		&:active, &:focus, &:hover {
-			filter: saturate(1.25) contrast(1.25);
-		}
-
 		&:not(.has-background) {
 			border-color: inherit;
 			background-color: transparent;
+		}
+
+		&:not(.has-text-color):not(.has-background) {
+			color: var(--color-accent, inherit);
 		}
 
 		&.has-background {
