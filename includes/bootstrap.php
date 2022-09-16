@@ -21,7 +21,7 @@ new Images\Image_Sizes(
 );
 if ( class_exists( 'Automattic\Jetpack\Jetpack_Lazy_Images' ) ) {
 	new Images\Lazy_Images();
-	new Images\Placeholders();
+	// new Images\Placeholders();
 }
 new Languages();
 new Nav_Menus();
