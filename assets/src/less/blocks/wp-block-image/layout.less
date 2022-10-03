@@ -16,15 +16,15 @@
 	}
 }
 
-.wp-block-image figure,
+.wp-block-image,
 .wp-caption {
 
-	max-inline-size: 100%;
-
 	&.aligncenter {
-		.text-center;
 		img {
 			.margin-inline( auto );
+		}
+		figcaption {
+			.text-center();
 		}
 	}
 	
@@ -32,14 +32,18 @@
 		.float-inline-start();
 		margin-inline-end: @space-2;
 		margin-block-end: @space-3;
-		.text-start();
+		figcaption {
+			.text-start();
+		}
 	}
 	
 	&.alignright {
 		.float-inline-end();
 		margin-inline-start: @space-2;
 		margin-block-end: @space-3;
-		.text-end();
+		figcaption {
+			.text-end();
+		}
 	}
 
 }
