@@ -3,13 +3,11 @@
  */
 
 .cata-overhang {
-    display: inline-block;
     position: absolute;
     text-indent: -200%;
 }
 
-:dir(rtl) .cata-overhang {
-    display: initial;
+[dir=rtl] .cata-overhang {
     position: initial;
-    text-indent: none;
+    text-indent: initial;
 }
