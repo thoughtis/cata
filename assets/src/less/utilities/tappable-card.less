@@ -1,0 +1,24 @@
+/**
+ * Tappable Card
+ *
+ * Use a pseudo element on the selected <a> tag make the whole card a tap target.
+ */
+
+.tappable-card {
+	position: relative;
+}
+
+.tappable-card-anchor::before {
+	content: "";
+	position: absolute;
+	.inset-inline-start(0);
+	.inset-block-start(0);
+	block-size: 100%;
+	inline-size: 100%;
+	z-index: 1;
+}
+
+.tappable-card-above {
+	position: relative;
+	z-index: 2;
+}
