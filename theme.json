@@ -67,6 +67,13 @@
 	"styles": {
 		"spacing": {
 			"blockGap": "0.75em"
+		},
+		"blocks": {
+			"core/button": {
+				"border": {
+					"radius": ".1875em"
+				}
+			}
 		}
 	},
 	"templateParts": []
