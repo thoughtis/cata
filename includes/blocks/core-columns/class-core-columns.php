@@ -19,6 +19,7 @@ class Core_Columns {
 	 */
 	public function __construct() {
 		add_filter( 'render_block', array( __CLASS__, 'add_unit_class' ), 10, 2 );
+		add_filter( 'register_block_type_args', array( __CLASS__, 'do_not_support_experimental_layout' ), 10, 2 );
 	}
 
 	/**
@@ -86,5 +87,31 @@ class Core_Columns {
 
 	}
 
+	/**
+	 * Do Not Support Experimental Layout
+	 *
+	 * @param array $args
+	 * @param string $name
+	 * @return array $args
+	 */
+	public static function do_not_support_experimental_layout( array $args, string $name ) : array {
+		if ( 'core/columns' !== $name ) {
+			return $args;
+		}
+		if ( ! isset( $args['supports'] ) || ! isset( $args['supports']['__experimentalLayout'] ) ) {
+			return $args;
+		}
+		return array_merge(
+			$args,
+			array(
+				'supports' => array_merge(
+					$args['supports'],
+					array(
+						'__experimentalLayout' => false
+					)
+				)
+			)
+		);
+	}
 }
 
