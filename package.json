@@ -25,7 +25,7 @@
     "autoprefixer": "^9.8.6",
     "axios": "^0.21.2",
     "babel-preset-minify": "^0.5.1",
-    "browser-sync": "^2.27.7",
+    "browser-sync": "^2.27.11",
     "css-byebye": "^2.0.2",
     "glob-parent": "^5.1.2",
     "gulp": "^4.0.2",
