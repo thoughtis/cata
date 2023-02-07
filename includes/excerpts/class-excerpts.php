@@ -16,8 +16,16 @@ class Excerpts {
 	 * Construct
 	 */
 	public function __construct() {
+		add_action( 'init', array( __CLASS__, 'add_excerpt_support' ), 20 );
 		add_filter( 'excerpt_length', array( __CLASS__, 'excerpt_length' ), 10, 1 );
 		add_filter( 'excerpt_more', array( __CLASS__, 'excerpt_more' ) );
+	}
+	
+	/**
+	 * Add Excerpt Support
+	 */
+	public static function add_excerpt_support() : void {
+		add_post_type_support( 'page', 'excerpt' );
 	}
 
 	/**
