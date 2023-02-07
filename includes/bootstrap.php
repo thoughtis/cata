@@ -25,3 +25,4 @@ if ( class_exists( 'Automattic\Jetpack\Jetpack_Lazy_Images' ) ) {
 new Languages();
 new Nav_Menus();
 new Sidebar();
+new Excerpts();
