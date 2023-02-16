@@ -2,9 +2,13 @@
 	"version": 2,
 	"customTemplates": [],
 	"settings": {
-		"custom" : {
-			"contentSize": "32rem",
-			"wideSize": "64rem"
+		"appearanceTools": true,
+		"custom": {
+			"fontScale": "max( 1rem, calc( 0.9375rem + 0.3125vw ) )"
+		},
+		"layout": {
+			"contentSize": "calc( 32 * var( --wp--custom--font-scale, 1rem ) )",
+			"wideSize": "calc( 64 * var( --wp--custom--font-scale, 1rem ) )"
 		},
 		"color": {
 			"custom": false,
@@ -12,29 +16,52 @@
 			"customGradient": false,
 			"duotone": [],
 			"gradients": [],
-			"link": false,
 			"defaultPalette": false,
 			"defaultGradients": false,
 			"palette": []
 		},
-		"layout": {
-			"contentSize": "var(--wp--custom--content-size, 32rem)",
-			"wideSize": "var(--wp--custom--wide-size, 64rem)"
-		},
 		"spacing": {
-			"margin": false,
-			"padding": false,
-			"blockGap": false,
-			"units": [ "em", "rem", "%" ]
+			"units": [ "em", "rem", "px", "%", "ch", "vw" ],
+			"spacingSizes": [
+				{
+					"slug": "20",
+					"name": "XXS",
+					"size": "0.375em"
+				},
+				{
+					"slug": "30",
+					"name": "XS",
+					"size": "0.75em"
+				},
+				{
+					"slug": "40",
+					"name": "SM",
+					"size": "1.125em"
+				},
+				{
+					"slug": "50",
+					"name": "MD",
+					"size": "1.5em"
+				},
+				{
+					"slug": "60",
+					"name": "LG",
+					"size": "2.25em"
+				},
+				{
+					"slug": "70",
+					"name": "XL",
+					"size": "3em"
+				},
+				{
+					"slug": "80",
+					"name": "XXL",
+					"size": "4.5em"
+				}
+			]
 		},
 		"typography": {
-			"customFontSize": false,
-			"customLineHeight": false,
 			"dropCap": false,
-			"fontStyle": false,
-			"fontWeight": false,
-			"letterSpacing": false,
-			"textDecoration": false,
 			"fontSizes": [
 				{
 					"name": "Extra Small",
@@ -66,7 +93,10 @@
 	},
 	"styles": {
 		"spacing": {
-			"blockGap": "0.75em"
+			"blockGap": "1.5em"
+		},
+		"typography": {
+			"fontSize": "var( --wp--custom--font-scale, 1rem )"
 		}
 	},
 	"templateParts": []

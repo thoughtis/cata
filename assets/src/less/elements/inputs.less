@@ -1,10 +1,10 @@
 input, select, textarea {
 	border: 0.0625em solid var(--color-text-contrast-AA);
-	border-radius: @space-1 / 2;
+	border-radius: 0.1875em;
 }
 
 input {
-	.padding-block( @space-1 / 2 );
+	.padding-block( 0.1875em );
 	
 	// indent all text-like inputs.
 	&[type=email],
@@ -14,16 +14,16 @@ input {
 	&[type=tel],
 	&[type=text],
 	&[type=url] {
-		text-indent: @space-1;
+		text-indent: @wp-spacing-20;
 	}
 }
 
 select {
-	.padding-inline( @space-1 / 2 );
+	.padding-inline( 0.1875em);
 }
 
 textarea {
-	padding: @space-1;
+	padding: @wp-spacing-20;
 
 	// contain textarea horizontally
 	max-inline-size: 100%;

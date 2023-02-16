@@ -6,7 +6,7 @@
 .wp-block-gallery {
 
 	--columns: 1;
-	--gap: @space-2;
+	--gap: @wp-spacing-30;
 	--max-container-size: @size-content;
 
 	display: flex;
@@ -19,7 +19,7 @@
 			( ( var(--max-container-size) - ( (var(--columns) - 1) * var(--gap) ) ) / var(--columns) ) * ( (var(--columns) - 0.49) / var(--columns) )
 		);
 		flex-grow: 1;
-		padding-block-end: @space-3;
+		padding-block-end: @wp-spacing-50;
 		position: relative;
 	}
 
@@ -40,23 +40,23 @@
 	}
 	&.columns-4 {
 		--columns: 4;
-		--gap: @space-1;
+		--gap: @wp-spacing-20;
 	}
 	&.columns-5 {
 		--columns: 5;
-		--gap: @space-1;
+		--gap: @wp-spacing-20;
 	}
 	&.columns-6 {
 		--columns: 6;
-		--gap: @space-1;
+		--gap: @wp-spacing-20;
 	}
 	&.columns-7 {
 		--columns: 7;
-		--gap: @space-1;
+		--gap: @wp-spacing-20;
 	}
 
 	figcaption {
-		block-size: @space-3;
+		block-size: @wp-spacing-50;
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		inline-size: 100%;
