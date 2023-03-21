@@ -27,7 +27,7 @@ class Admin {
 		add_menu_page(
 			'Reusable blocks', 
 			'Reusable blocks', 
-			'edit_posts', 
+			'edit_others_posts', 
 			'edit.php?post_type=wp_block', 
 			'', 
 			'dashicons-block-default', 
