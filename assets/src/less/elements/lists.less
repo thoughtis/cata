@@ -9,12 +9,8 @@
  */
 
 :is(menu,ol,ul):not([class]) {
-	padding-inline-start: @wp-spacing-50;
+	padding-inline-start: 3ch;
 	li + li {
 		margin-block-start: calc( @wp-block-gap / 3 );
-	}
-	li > ol,
-	li > ul {
-		margin-block-start: 0;
 	}
 }
