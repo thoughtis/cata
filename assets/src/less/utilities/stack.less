@@ -6,18 +6,18 @@
 
 .stack {
 	> * + * {
-		margin-block-start: @wp-spacing-50;
+		margin-block-start: @wp-block-gap;
 	}
 }
 
 .stack--tight {
 	> * + * {
-		margin-block-start: @wp-spacing-30;
+		margin-block-start: calc( @wp-block-gap / 2 );
 	}
 }
 
 .stack--loose {
 	> * + * {
-		margin-block-start: @wp-spacing-70;
+		margin-block-start: calc( @wp-block-gap * 2 );
 	}
 }
