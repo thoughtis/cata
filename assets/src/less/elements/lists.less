@@ -8,15 +8,9 @@
  * @see utilities/lists for a reset to use if you want to remove list styling somewhere.
  */
 
-ul, ol {
-	&:not([class]) {
-		padding-inline-start: @wp-spacing-50;
-		li + li {
-			margin-block-start: @wp-spacing-30;
-		}
-		li > ol,
-		li > ul {
-			margin-block-start: @wp-spacing-20;
-		}
+:is(menu,ol,ul):not([class]) {
+	padding-inline-start: 3ch;
+	li + li {
+		margin-block-start: calc( @wp-block-gap / 3 );
 	}
 }
