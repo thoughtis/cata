@@ -4,8 +4,7 @@
 
 .entry {
 	.stack--loose();
-	padding-inline-start: @space-vw-2;
-	padding-inline-end: @space-vw-2;
+	.padding-inline(@wp-root-padding);
 }
 
 .entry__content {
@@ -48,7 +47,7 @@
 
 	> .alignfull {
 		max-inline-size: none;
-		.margin-inline( -@space-vw-2 );
+		.margin-inline( calc( -1 * @wp-root-padding ) );
 
 		// specifically for blocks where width/inline-size is defined as 100%
 		inline-size: auto;
