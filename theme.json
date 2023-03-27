@@ -5,7 +5,8 @@
 	"settings": {
 		"appearanceTools": true,
 		"custom": {
-			"fontScale": "max( 1rem, calc( 0.9375rem + 0.3125vw ) )"
+			"fontScale": "max( 1rem, calc( 0.9375rem + 0.3125vw ) )",
+			"rootPadding": "3.75vw"
 		},
 		"layout": {
 			"contentSize": "calc( 32 * var( --wp--custom--font-scale, 1rem ) )",
