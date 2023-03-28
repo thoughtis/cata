@@ -5,7 +5,7 @@
 .wp-block-pullquote {
 
 	.padding-block( @wp-spacing-50 );
-	.padding-inline( @space-vw-1 );
+	.padding-inline( calc( @wp-root-padding / 2 ) );
 	font-size: @fs-h4;
 
 	// WP assumes you'll separate this with lines on the block edges.
@@ -21,11 +21,11 @@
 	// &.alignwide {}
 
 	&.alignleft {
-		margin-inline-start: -@space-vw-2;
+		margin-inline-start: calc( -1 * @wp-root-padding );
 	}
 	
 	&.alignright {
-		margin-inline-end: -@space-vw-2;
+		margin-inline-end: calc(-1 * @wp-root-padding );
 	}
 
 }
