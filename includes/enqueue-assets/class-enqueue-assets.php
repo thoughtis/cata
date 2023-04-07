@@ -21,6 +21,7 @@ if ( ! class_exists( 'Cata\Enqueue_Assets' ) ) :
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'dequeue_wp_block_styles' ) );
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles_blocking' ) );
 			add_action( 'wp_body_open', array( __CLASS__, 'enqueue_styles_nonblocking' ) );
+			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
 		}
 
 		/**
@@ -48,6 +49,13 @@ if ( ! class_exists( 'Cata\Enqueue_Assets' ) ) :
 		 */
 		public static function enqueue_styles_nonblocking() : void {
 			wp_enqueue_style( 'cata-nonblocking', get_template_directory_uri() . '/assets/dist/css/nonblocking.css', array(), wp_get_theme( 'cata' )->get( 'Version' ), 'screen' );
+		}
+
+		/**
+		 * Enqueue Scripts
+		 */
+		public static function enqueue_scripts() : void {
+			wp_enqueue_script( 'cata-module-app', get_stylesheet_directory_uri() . '/assets/dist/js/app.js', array(), wp_get_theme( 'cata' )->get( 'Version' ), true );
 		}
 
 	}
