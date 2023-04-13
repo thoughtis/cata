@@ -13,9 +13,19 @@ const PROPERTY_NAME = '--color-text-decoration-rgb';
  * @return {void}
  */
 export default function main() {
-	[...document.querySelectorAll('.has-link-color a')].forEach(handleLink);
+	changeTextDecorationColor();
+	
+	if ( 0 < document.querySelectorAll( '.wp-block-cata-toc' ).length ) {
+		document.addEventListener( 'tocBlocksRendered', changeTextDecorationColor );
+	}
 }
 
+/**
+ * Change Text Decoration Color
+ */
+function changeTextDecorationColor() {
+	[...document.querySelectorAll('.has-link-color a')].forEach(handleLink);
+}
 
 /**
  * Handle Link
