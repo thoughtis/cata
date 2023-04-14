@@ -22,6 +22,7 @@ if ( ! class_exists( 'Cata\Enqueue_Assets' ) ) :
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles_blocking' ) );
 			add_action( 'wp_body_open', array( __CLASS__, 'enqueue_styles_nonblocking' ) );
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
+			add_filter( 'script_loader_tag', array( __CLASS__, 'use_module_type' ), 10, 3 );
 		}
 
 		/**
@@ -56,6 +57,21 @@ if ( ! class_exists( 'Cata\Enqueue_Assets' ) ) :
 		 */
 		public static function enqueue_scripts() : void {
 			wp_enqueue_script( 'cata-module-app', get_stylesheet_directory_uri() . '/assets/dist/js/app.js', array(), wp_get_theme( 'cata' )->get( 'Version' ), true );
+		}
+
+		/**
+		 * Use Module Type
+		 * 
+		 * @param string $tag Provided script element.
+		 * @param string $handle Identifier for the script.
+		 * @param string $src URL of the script.
+		 * @return string
+		 */
+		public static function use_module_type( string $tag, string $handle, string $src ) : string {
+			if ( false === strpos( $handle, 'cata-module' ) ) {
+				return $tag;
+			}
+			return "<script type=\"module\" src=\"${src}\" async></script>\n";
 		}
 
 	}
