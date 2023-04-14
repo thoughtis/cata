@@ -21,7 +21,7 @@ export default function main() {
  * Change Text Decoration Color
  */
 function changeTextDecorationColor() {
-	[...document.querySelectorAll('.has-link-color a')].forEach(handleLink);
+	[...document.querySelectorAll(`.has-link-color a:not([style*=${PROPERTY_NAME}])`)].forEach(handleLink);
 }
 
 /**
