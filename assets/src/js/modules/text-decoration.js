@@ -13,11 +13,8 @@ const PROPERTY_NAME = '--color-text-decoration-rgb';
  * @return {void}
  */
 export default function main() {
-	changeTextDecorationColor();
-	
-	if ( 0 < document.querySelectorAll( '.wp-block-cata-toc' ).length ) {
-		document.addEventListener( 'tocBlocksRendered', changeTextDecorationColor );
-	}
+	changeTextDecorationColor();	
+	document.addEventListener( 'tocBlocksRendered', changeTextDecorationColor );
 }
 
 /**
