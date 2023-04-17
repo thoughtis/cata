@@ -56,7 +56,7 @@ if ( ! class_exists( 'Cata\Enqueue_Assets' ) ) :
 		 * Enqueue Scripts
 		 */
 		public static function enqueue_scripts() : void {
-			wp_enqueue_script( 'cata-module-app', get_stylesheet_directory_uri() . '/assets/dist/js/app.js', array(), wp_get_theme( 'cata' )->get( 'Version' ), true );
+			wp_enqueue_script( 'cata-module-app', get_template_directory_uri() . '/assets/dist/js/app.js', array(), wp_get_theme( 'cata' )->get( 'Version' ), true );
 		}
 
 		/**
