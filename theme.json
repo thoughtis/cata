@@ -99,6 +99,17 @@
 		},
 		"typography": {
 			"fontSize": "var( --wp--custom--font-scale, 1rem )"
+		},
+		"blocks": {
+			"cata/faq": {
+				"elements": {
+					"heading": {
+						"typography": {
+							"fontSize": "var( --wp--custom--font-scale, 1rem )"
+						}
+					}
+				}
+			}
 		}
 	},
 	"templateParts": []
