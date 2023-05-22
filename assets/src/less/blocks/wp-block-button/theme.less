@@ -2,50 +2,9 @@
  * .wp-block-button
  */
 
-.wp-block-button {
-
-	.wp-block-button__link {
-
-		border-color: transparent;
-
-		&:not(.has-background) {
-			background-color: var(--color-button);
-		}
-		
-		&:not(.has-text-color) {
-			color: var(--color-background);
-		}
-
-		&:hover, &:active, &:focus {
-			filter: saturate(1.25) contrast(1.25);
-		}
-
-	}
-
-	&.is-style-outline {
-		.wp-block-button__link {
-
-			border-color: currentColor;
-
-			&:not(.has-background) {
-				background-color: inherit;
-			}
-			
-			&:not(.has-text-color) {
-				color: var(--color-button);
-			}
-
-		}
-	}
-
-}
-
-// div
 .wp-block-button.is-style-streaming {
 
-	// a
 	.wp-block-button__link {
-
 		box-shadow: -0.125em 0.125em 0 var(--color-background), -0.25em 0.25em 0 currentColor;
 		transition: box-shadow 100ms linear;
 
@@ -88,5 +47,4 @@
 			}
 		}
 	}
-
 }

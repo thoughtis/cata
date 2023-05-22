@@ -2,50 +2,8 @@
  * Button
  */
 
-.wp-block-button {
-
-	&.has-custom-width {
-
-		.wp-block-button__link {
-			inline-size: 100%;
-			text-align: center;
-		}
-
-		&.wp-block-button__width-25 {
-			inline-size: calc(25% - @wp-spacing-30);
-		}
-
-		&.wp-block-button__width-50 {
-			inline-size: calc(50% - @wp-spacing-30);
-		}
-
-		&.wp-block-button__width-75 {
-			inline-size: calc(75% - @wp-spacing-30);
-		}
-
-		&.wp-block-button__width-100 {
-			inline-size: 100%;
-		}
-	}
-
-}
-
-.wp-block-button {
-	.wp-block-button__link {
-		.button-layout();
-	}
-}
-
-.wp-block-button__link.no-border-radius {
-	border-radius: 0;
-}
-
-// div
 .wp-block-button.is-style-streaming {
-
-	// a
 	.wp-block-button__link {
-
 		&::after {
 			content: "";
 			inline-size: 1.125em;
