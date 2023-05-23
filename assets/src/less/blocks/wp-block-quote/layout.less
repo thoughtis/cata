@@ -1,0 +1,28 @@
+.wp-block-pullquote,
+.wp-block-quote {
+
+	p:first-of-type::before {
+		content: open-quote;
+	}
+
+	p:last-of-type::after {
+		content: close-quote;
+	}
+
+	p {
+		// important needed to override wp block library.
+		font-size: inherit !important;
+		line-height: inherit;
+		text-indent: -0.625ch;
+	}
+
+	cite {
+		margin-block-start: calc( var(--wp--style--block-gap) / 2 );
+		display: block;
+		font-size: ~"min(0.875em,1.25rem)";
+
+		&:before {
+			content: "—";
+		}
+	}
+}
