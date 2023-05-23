@@ -187,6 +187,16 @@
 						}
 					}
 				}
+			},
+			"core/pullquote": {
+				"spacing": {
+					"padding": {
+						"top": "var(--wp--preset--spacing--50,1.5em)",
+						"bottom": "var(--wp--preset--spacing--50,1.5em)",
+						"left": "calc(var(--wp--custom--root-padding,3.75vw)/ 2)",
+						"right": "calc(var(--wp--custom--root-padding,3.75vw)/ 2)"
+					}
+				}
 			}
 		}
 	},
