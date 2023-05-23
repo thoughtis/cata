@@ -100,12 +100,58 @@
 		"typography": {
 			"fontSize": "var( --wp--custom--font-scale, 1rem )"
 		},
+		"elements": {
+			"button": {
+				"border": {
+					"width": "0.125em",
+					"radius": "var(--wp--custom--border-radius, 0.1875em)"
+				},
+				"spacing": {
+					"padding": {
+						"top": "var(--wp--preset--spacing--20, 0.375em)",
+						"bottom": "var(--wp--preset--spacing--20, 0.375em)",
+						"left": "var(--wp--preset--spacing--30, 0.75em)",
+						"right": "var(--wp--preset--spacing--30, 0.75em)"
+					}
+				}
+			}
+		},
 		"blocks": {
 			"cata/faq": {
 				"elements": {
 					"heading": {
 						"typography": {
 							"fontSize": "var( --wp--custom--font-scale, 1rem )"
+						}
+					}
+				}
+			},
+			"core/button": {
+				"variations": {
+					"outline" : {
+						"border": {
+							"width": {
+								"ref": "styles.elements.button.border.width"
+							},
+							"radius": {
+								"ref": "styles.elements.button.border.radius"
+							}
+						},
+						"spacing": {
+							"padding": {
+								"top": {
+									"ref": "styles.elements.button.spacing.padding.top"
+								},
+								"bottom": {
+									"ref": "styles.elements.button.spacing.padding.bottom"
+								},
+								"left": {
+									"ref": "styles.elements.button.spacing.padding.left"
+								},
+								"right": {
+									"ref": "styles.elements.button.spacing.padding.right"
+								}
+							}
 						}
 					}
 				}
