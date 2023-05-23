@@ -122,9 +122,6 @@
 					"text": "var(--color-background, #ffffff)",
 					"background": "var(--color-button, #2b2b2b)"
 				},
-				"typography": {
-					"lineHeight": "1"
-				},
 				":hover": {
 					"color": {
 						"text": {
