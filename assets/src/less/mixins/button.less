@@ -3,7 +3,6 @@
 	border: 0.125em solid;
 	border-radius: var(--wp--custom--border-radius, 0.1875em);
 	display: inline-block;
-	line-height: 1;
 	padding: @wp-spacing-20 @wp-spacing-30;
 	text-decoration: none;
 	font-weight: normal;
@@ -20,17 +19,15 @@
 }
 
 .button-theme() {
-	border-color: currentColor;
-	color: var(--color-button);
-
+	background-color: var(--color-button);
+	border-color: transparent;
+	color: var(--color-background);
 	&:visited {
-		color: var(--color-button);
+		color: var(--color-background);
 	}
-
-	&:hover,
-	&:active,
-	&:focus {
-		color: var(--color-button-interactive);
-		border-color: var(--color-button-interactive);
+	&:hover, &:active, &:focus {
+		background-color: var(--color-button-interactive);
+		color: var(--color-background-contrast-high);
+		border-color: transparent;
 	}
 }

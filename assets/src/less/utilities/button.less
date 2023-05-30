@@ -8,9 +8,8 @@
 }
 
 .button.has-icon {
-	vertical-align: middle;
+	vertical-align: text-bottom;
 	svg {
-		.float-start();
 		pointer-events: none;
 		&:not([fill]) {
 			fill: currentColor;
@@ -39,32 +38,15 @@
  * Styles Utilizing Themes
  */
 
-.button.is-transparent {
-	border-color: transparent;
-}
-
+// filled is default,
+// reiterated in case we need to override another style
 .button.is-filled {
-	background-color: var(--color-button);
-	border-color: transparent;
-	color: var(--color-background);
-	&:visited {
-		color: var(--color-background);
-	}
-	&:hover, &:active, &:focus {
-		background-color: var(--color-button-interactive);
-		color: var(--color-background-contrast-high);
-		border-color: transparent;
-	}
+	.button-theme();
 }
 
-/**
- * Outlined is the default style.
- * This class exists to override is-filled,
- * which we needed for the block editor where filled is the default.
- */
+.button.is-transparent, 
 .button.is-outlined {
 	background-color: inherit;
-	border-color: currentColor;
 	color: var(--color-button);
 	&:visited {
 		color: var(--color-button);
@@ -75,4 +57,12 @@
 		color: var(--color-button-interactive);
 		border-color: var(--color-button-interactive);
 	}
+}
+
+.button.is-transparent {
+	border-color: transparent;
+}
+
+.button.is-outlined {
+	border-color: currentColor;
 }
