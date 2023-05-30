@@ -43,6 +43,8 @@ class Streaming {
 .wp-block-button.is-style-streaming .wp-block-button__link{
 	border-style: solid;
 	border-width: 0.125em;
+	display: flex;
+	align-items: center;
 }
 .wp-block-button.is-style-streaming .wp-block-button__link:not(.has-background) {
 	border-color: currentColor;
@@ -56,8 +58,8 @@ class Streaming {
 }
 .wp-block-button.is-style-streaming .wp-block-button__link::after {
 	content: "";
-	inline-size: 1.125em;
-	block-size: 1.125em;
+	inline-size: 1em;
+	block-size: 1em;
 	display: inline-block;
 	vertical-align: top;
 	margin-inline-start: 0.5em;
