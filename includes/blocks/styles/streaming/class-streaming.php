@@ -43,8 +43,9 @@ class Streaming {
 .wp-block-button.is-style-streaming .wp-block-button__link{
 	border-style: solid;
 	border-width: 0.125em;
-	display: flex;
+	display: inline-flex;
 	align-items: center;
+	column-gap: 0.5em;
 }
 .wp-block-button.is-style-streaming .wp-block-button__link:not(.has-background) {
 	border-color: currentColor;
@@ -60,9 +61,6 @@ class Streaming {
 	content: "";
 	inline-size: 1em;
 	block-size: 1em;
-	display: inline-block;
-	vertical-align: top;
-	margin-inline-start: 0.5em;
 	background-color: currentColor;
 	mask-image: url(data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%2C16C3.59%2C16%2C0%2C12.41%2C0%2C8S3.59%2C0%2C8%2C0s8%2C3.59%2C8%2C8-3.59%2C8-8%2C8Zm0-15C4.14%2C1%2C1%2C4.14%2C1%2C8s3.14%2C7%2C7%2C7%2C7-3.14%2C7-7S11.86%2C1%2C8%2C1Zm3.12%2C7L6.88%2C3.76V12.24s4.24-4.24%2C4.24-4.24Z%22%20fill%3D%22black%22%2F%3E%3C%2Fsvg%3E);
 	-webkit-mask-image: url(data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%2C16C3.59%2C16%2C0%2C12.41%2C0%2C8S3.59%2C0%2C8%2C0s8%2C3.59%2C8%2C8-3.59%2C8-8%2C8Zm0-15C4.14%2C1%2C1%2C4.14%2C1%2C8s3.14%2C7%2C7%2C7%2C7-3.14%2C7-7S11.86%2C1%2C8%2C1Zm3.12%2C7L6.88%2C3.76V12.24s4.24-4.24%2C4.24-4.24Z%22%20fill%3D%22black%22%2F%3E%3C%2Fsvg%3E);
