@@ -41,11 +41,9 @@ class Streaming {
 	public static function get_inline_style() : string {
 		$style = <<<'EOD'
 .wp-block-button.is-style-streaming .wp-block-button__link{
-	border-style: solid;
-	border-width: 0.125em;
 	display: inline-flex;
 	align-items: center;
-	column-gap: 0.5em;
+	column-gap: 1ch;
 }
 .wp-block-button.is-style-streaming .wp-block-button__link:not(.has-background) {
 	border-color: currentColor;
