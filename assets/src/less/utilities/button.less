@@ -1,0 +1,55 @@
+.button {
+	.button-layout();
+	.button-theme();
+}
+
+:where(a.button) {
+	display: inline-block;
+	text-decoration-line: none;
+}
+
+.button.has-icon {
+	display: inline-flex;
+	align-items: center;
+	column-gap: 1ch;
+	svg {
+		pointer-events: none;
+		&:not([fill]) {
+			fill: currentColor;
+		}
+	}
+}
+
+/**
+ * Color Themes
+ */
+
+.button.is-secondary {
+	--color-button: var(--color-text);
+	--color-button-interactive: var(--color-accent);
+}
+
+.button.is-primary {
+	--color-button: var(--color-accent);
+	--color-button-interactive: var(--color-accent-emphasized);
+}
+
+/**
+ * Styles Utilizing Themes
+ */
+
+// filled is default,
+// reiterated in case we need to override another style
+.button.is-filled {
+	.button-theme();
+}
+
+.button.is-transparent {
+	.button-theme-outlined();
+	border-color: transparent;
+}
+
+.button.is-outlined {
+	.button-theme-outlined();
+	border-color: currentColor;
+}

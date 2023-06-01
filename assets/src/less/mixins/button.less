@@ -29,3 +29,16 @@
 		border-color: transparent;
 	}
 }
+
+.button-theme-outlined() {
+	background-color: inherit;
+	color: var(--color-button);
+	&:visited {
+		color: var(--color-button);
+	}
+	&:hover,
+	&:active,
+	&:focus {
+		color: var(--color-button-interactive);
+	}
+}
