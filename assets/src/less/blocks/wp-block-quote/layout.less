@@ -1,44 +1,25 @@
-.wp-block-quote,
-.wp-block-pullquote blockquote {
+.wp-block-pullquote,
+.wp-block-quote {
 
-	.stack--tight;
-	.margin-inline(0);
-	// normal spacing multiplied by the amount we'll scale() the quotation marks.
-	padding-inline-start: 1.125em;
-	line-height: calc( 1em + 0.5rem );
-
-	&.is-style-large {
-		font-size: @fs-h4;
+	p:first-of-type::before {
+		content: open-quote;
 	}
 
-	p:first-of-type:before,
-	p:last-of-type:after {
-		display: inline-block;
+	p:last-of-type::after {
+		content: close-quote;
 	}
 
-	p:first-of-type:before {
-		content: @unicode-left-double-quotation-mark;
-		position: absolute;
-		margin-inline-start: calc( -1 * @wp-spacing-30 );
-	}
-
-	p:last-of-type:after {
-		content: @unicode-right-double-quotation-mark;
+	p {
+		text-indent: -0.625ch;
 	}
 
 	cite {
+		margin-block-start: calc( var(--wp--style--block-gap) / 2 );
 		display: block;
-		font-size: @fs-sm;
+		font-size: ~"min(0.875em,1.25rem)";
+
 		&:before {
 			content: "—";
 		}
 	}
-
-	&.is-style-plain {
-		p:first-of-type:before,
-		p:last-of-type:after {
-			content: none;
-		}
-	}
-
 }

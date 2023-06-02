@@ -7,7 +7,6 @@
 
 namespace Cata;
 
-new Blocks\Core_Columns();
 new Blocks\Experimental\Font_Family();
 new Blocks\Styles\Streaming();
 new Custom_Formats\Mark();
