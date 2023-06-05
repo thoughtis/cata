@@ -1,0 +1,28 @@
+/**
+ * Screen Reader Text
+ */
+
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: var(--color-background);
+	clip: auto;
+	clip-path: none;
+	display: block;
+	height: auto;
+	left: auto;
+	padding: 1em;
+	top: auto;
+	width: auto;
+	z-index: 5999999;
+}
