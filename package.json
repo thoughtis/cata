@@ -1,6 +1,6 @@
 {
   "name": "cata",
-  "version": "0.8.9",
+  "version": "0.8.10",
   "description": "WordPress theme, initially designed for Shop Catalog.",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,6 @@
     "url": "https://github.com/thoughtis/cata/issues"
   },
   "homepage": "https://github.com/thoughtis/cata#readme",
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
@@ -42,6 +41,6 @@
     "set-value": "^4.0.1"
   },
   "browserslist": [
-	"> 1%"
+    "> 1%"
   ]
 }
