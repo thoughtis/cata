@@ -1,0 +1,26 @@
+/**
+ * Blocking CSS
+ * We'll let this be load blocking in the <head>.
+ * Uses the Inverted Triangle structure, with the exception of Objects / Components.
+ * @link https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+ */
+
+/**
+ * Settings
+ */
+ @import "variables/**";
+
+ /**
+  * Tools
+  * Utilities can also be used like mixins,
+  * but have to be imported last so they're output at the end of the compiled file.
+  */
+ @import "mixins/**";
+ 
+ /**
+  * Generic
+  */
+ @import (once) "elements/root.less";
+ @import (inline) "../../../node_modules/normalize.css/normalize.css";
+ @import "reset/**";
+ 
