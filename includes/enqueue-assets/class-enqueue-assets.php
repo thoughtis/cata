@@ -29,7 +29,7 @@ if ( ! class_exists( 'Cata\Enqueue_Assets' ) ) :
 		 * Enqueue Blocking Reset/Normalize Styles
 		 */
 		public static function enqueue_styles_reset_blocking() : void {
-			wp_enqueue_style( 'cata-blocking', get_template_directory_uri() . '/assets/dist/css/reset-blocking.css', array( 'wp-block-library' ), wp_get_theme( 'cata' )->get( 'Version' ), 'screen' );
+			wp_enqueue_style( 'cata-reset-blocking', get_template_directory_uri() . '/assets/dist/css/reset-blocking.css', array( 'wp-block-library' ), wp_get_theme( 'cata' )->get( 'Version' ), 'screen' );
 		}
 
 		/**
