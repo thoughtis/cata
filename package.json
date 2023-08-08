@@ -1,6 +1,6 @@
 {
   "name": "cata",
-  "version": "0.8.10",
+  "version": "0.8.11",
   "description": "WordPress theme, initially designed for Shop Catalog.",
   "main": "index.js",
   "scripts": {
