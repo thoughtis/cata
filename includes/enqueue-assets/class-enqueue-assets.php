@@ -18,7 +18,7 @@ if ( ! class_exists( 'Cata\Enqueue_Assets' ) ) :
 		 * Construct
 		 */
 		public function __construct() {
-			// add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles_reset_blocking' ), 5 );
+			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles_reset_blocking' ), 5 );
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles_blocking' ) );
 			add_action( 'wp_body_open', array( __CLASS__, 'enqueue_styles_nonblocking' ) );
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
@@ -28,9 +28,9 @@ if ( ! class_exists( 'Cata\Enqueue_Assets' ) ) :
 		/** 
 		 * Enqueue Blocking Reset/Normalize Styles
 		 */
-		// public static function enqueue_styles_reset_blocking() : void {
-		// 	wp_enqueue_style( 'cata-reset-blocking', get_template_directory_uri() . '/assets/dist/css/reset-blocking.css', array(), wp_get_theme( 'cata' )->get( 'Version' ), 'screen' );
-		// }
+		public static function enqueue_styles_reset_blocking() : void {
+			wp_enqueue_style( 'cata-reset-blocking', get_template_directory_uri() . '/assets/dist/css/reset-blocking.css', array(), wp_get_theme( 'cata' )->get( 'Version' ), 'screen' );
+		}
 
 		/**
 		 * Enqueue Blocking Styles
