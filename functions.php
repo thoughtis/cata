@@ -6,6 +6,19 @@
  * @since   0.1.0
  */
 
+function test_function() {
+	do_action('qm/debug', 'filtering');
+
+	return true;
+}
+
+ add_filter(
+    'wp_lazy_loading_enabled',
+    'test_function',
+    10,
+    3
+);
+
 if ( ! function_exists( 'cata_after_setup_theme' ) ) :
 	/**
 	 * After Setup Theme
