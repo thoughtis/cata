@@ -10,18 +10,22 @@
  */
 @import "variables/**";
 
- /**
-  * Tools
-  * Utilities can also be used like mixins,
-  * but have to be imported last so they're output at the end of the compiled file.
-  */
+/**
+ * Tools
+ * Utilities can also be used like mixins,
+ * but have to be imported last so they're output at the end of the compiled file.
+ */
 @import "mixins/**";
  
- /**
-  * Generic
-  */
-@layer normalize;
+/**
+ * Generic
+ */
+@layer normalize, reset;
+
 @layer normalize {
     @import (inline) "../../../node_modules/normalize.css/normalize.css";
 }
-@import "reset/**";
+
+@layer reset {
+    @import "reset/**";
+}
