@@ -21,11 +21,6 @@
  * Generic
  */
 @layer normalize, reset;
+@import (inline) "../../../node_modules/normalize.css/normalize.css" layer(utilities);
+@import "reset/**" layer(reset);
 
-@layer normalize {
-    @import (inline) "../../../node_modules/normalize.css/normalize.css";
-}
-
-@layer reset {
-    @import "reset/**";
-}
