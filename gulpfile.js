@@ -12,11 +12,11 @@ const less         = require( 'gulp-less' );
 const lessGlob     = require( 'less-plugin-glob' );
 const path         = require( 'path' );
 const postcss      = require( 'gulp-postcss' );
-const postcssClean = require( 'postcss-clean' );
 const rollup       = require( 'gulp-better-rollup' );
 const rollupBabel  = require( '@rollup/plugin-babel' );
 const cssByeBye    = require( 'css-byebye' );
 const concat       = require( 'gulp-concat' );
+const CleanCSS     = require( 'clean-css' );
 
 /**
  * Task: LESS
@@ -30,13 +30,12 @@ function taskLess( done ) {
 		plugins: [ lessGlob ]
 	};
 
-	const postcssCleanOptions = {
+	const cssCleanOptions = {
 		level: 2,
-		keepSpecialComments: 0
+		specialComments: 0
 	};
 
 	const postcssPlugins = [
-		postcssClean( postcssCleanOptions ),
 		autoprefixer(),
 		cssByeBye({
 			rulesToRemove: [
@@ -56,6 +55,10 @@ function taskLess( done ) {
 	gulp
 		.src( './assets/src/less/*.less' )
 		.pipe( less( lessOptions ) )
+		.on('data', function(file) {
+            const buferFile = new CleanCSS(cssCleanOptions).minify(file.contents)
+            return file.contents = Buffer.from(buferFile.styles)
+        })
 		.pipe( postcss( postcssPlugins ) )
 		.pipe( gulp.dest( './assets/dist/css' ) )
 		.pipe( browserSync.stream() );
