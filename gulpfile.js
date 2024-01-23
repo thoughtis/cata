@@ -107,7 +107,7 @@ async function taskScripts( done ) {
 
 	const inputSettings = {
 		plugins: [
-			rollupBabel.babel()
+			rollupBabel.babel({ babelHelpers: 'bundled'})
 		]
 	};
 
