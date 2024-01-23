@@ -36,7 +36,7 @@
     "gulp-postcss": "^9.0.0",
     "less-plugin-glob": "^3.0.0",
     "normalize.css": "^8.0.1",
-    "postcss": "^8.2.15",
+    "postcss": "^8.4.31",
     "rollup": "^1.32.1",
     "set-value": "^4.0.1"
   },
