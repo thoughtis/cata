@@ -19,6 +19,11 @@ if ( ! class_exists( 'Cata\Sidebar' ) ) :
 		 */
 		public function __construct() {
 			add_action( 'widgets_init', array( __CLASS__, 'register_sidebar' ) );
+			/**
+			 * @link https://github.com/thoughtis/cata/issues/180
+			 * @priority 10: after do_blocks, but before do_shortcode.
+			 */
+			add_filter( 'widget_block_content', 'shortcode_unautop' );
 		}
 
 		/**
