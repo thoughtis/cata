@@ -1,6 +1,6 @@
 <?php
 /**
- * Primary Start
+ * Primary Open
  *
  * @package Cata
  * @since 0.8.19

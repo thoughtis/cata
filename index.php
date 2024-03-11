@@ -7,7 +7,7 @@
  */
 
 get_header();
-get_template_part( 'template-parts/primary/primary', 'start' );
+get_template_part( 'template-parts/primary/primary', 'open' );
 if ( have_posts() ) :
 	while ( have_posts() ) :
 		the_post();
@@ -21,5 +21,5 @@ if ( have_posts() ) :
 else :
 	get_template_part( 'template-parts/content/content', 'none' );
 endif;
-get_template_part( 'template-parts/primary/primary', 'end' );
+get_template_part( 'template-parts/primary/primary', 'close' );
 get_footer();
