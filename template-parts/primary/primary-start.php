@@ -1,9 +1,9 @@
 <?php
 /**
- * woocommerce/global/wrapper-start
+ * Primary Start
  *
- * @package WooCommerce/Templates
- * @version 3.3.0
+ * @package Cata
+ * @since 0.8.19
  */
 
 ?>

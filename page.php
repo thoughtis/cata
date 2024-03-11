@@ -7,7 +7,7 @@
  */
 
 get_header();
-get_template_part( 'woocommerce/global/wrapper', 'start' );
+get_template_part( 'template-parts/primary/primary', 'start' );
 while ( have_posts() ) :
 	the_post();
 	get_template_part( 'template-parts/content/content', get_post_type() );
@@ -16,5 +16,5 @@ while ( have_posts() ) :
 		comments_template();
 	endif;
 endwhile;
-get_template_part( 'woocommerce/global/wrapper', 'end' );
+get_template_part( 'template-parts/primary/primary', 'end' );
 get_footer();
