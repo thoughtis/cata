@@ -37,15 +37,6 @@ if ( ! function_exists( 'cata_after_setup_theme' ) ) :
 		add_theme_support( 'responsive-embeds' );
 		add_theme_support( 'title-tag' );
 
-		/**
-		 * Theme Supports Woocommerce
-		 * 
-		 * @link https://github.com/woocommerce/woocommerce/wiki/Declaring-WooCommerce-support-in-themes
-		 */
-		add_theme_support( 'woocommerce' );
-		add_theme_support( 'wc-product-gallery-lightbox' );
-		add_theme_support( 'wc-product-gallery-slider' );
-		
 		remove_theme_support( 'core-block-patterns' );
 	}
 endif;
