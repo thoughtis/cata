@@ -36,6 +36,8 @@ if ( ! function_exists( 'cata_after_setup_theme' ) ) :
 		add_theme_support( 'html5', $html5_options );
 		add_theme_support( 'responsive-embeds' );
 		add_theme_support( 'title-tag' );
+
+		remove_theme_support( 'core-block-patterns' );
 	}
 endif;
 add_action( 'after_setup_theme', 'cata_after_setup_theme' );
