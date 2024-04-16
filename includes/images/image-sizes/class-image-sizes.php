@@ -81,6 +81,15 @@ class Image_Sizes {
 		add_image_size( 'cata_2x1_sm', $sm, ($sm / 2), true );	
 		add_image_size( 'cata_2x1_md', $md, ($md / 2), true );
 		add_image_size( 'cata_2x1_lg', $lg, ($lg / 2), true );
+
+		/**
+		 * 1x1 cropped sizes
+		 */
+		add_image_size( 'cata_square_xxs', 64, 64, true );
+		add_image_size( 'cata_square_xs', 128, 128, true );
+		add_image_size( 'cata_square_sm', 384, 384, true );
+		add_image_size( 'cata_square_md', 768, 768, true );
+		add_image_size( 'cata_square_lg', 1152, 1152, true );
 	}
 
 	/**
