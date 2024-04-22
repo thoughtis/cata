@@ -2,62 +2,17 @@
 	.preview__content {
 		margin-block-start: @wp-spacing-20;
 	}
-
-	.preview__avatar {
-		inline-size: 2.25em;
-		block-size: 2.25em;
-		vertical-align: middle;
-		clip-path: circle(50%);
-	}
-
-	.preview__avatar ~ a[rel=author] {
-		margin-inline-start: 0.5ch;
-	}
 }
 
 .preview.is-layout-network {
 	.preview__layout {
-		display: flex;
-		flex-wrap: wrap;
 		column-gap: @wp-spacing-60;
 		row-gap: @wp-spacing-40;
-
-		> * {
-			flex-grow: 1;
-		}
-	}
-
-	.preview__start {
-		flex-basis: 15em;
-	}
-
-	.preview__end {
-		flex-basis: 18em;
 	}
 }
 
 .preview.is-layout-compact {
 	.preview__layout {
-		display: flex;
-		flex-wrap: wrap;
 		gap: @wp-block-gap;
-
-		> div {
-			max-inline-size: 100%;
-		}
-	}
-
-	.preview__start {
-		flex-grow: 1;
-		flex-basis: 5em;
-	}
-
-	.preview__end {
-		flex-grow: 2;
-		flex-basis: 10em;
-	}
-
-	.preview__title {
-		margin: 0;
 	}
 }
