@@ -22,3 +22,4 @@ new Nav_Menus();
 new Sidebar();
 new Excerpts();
 new Admin();
+new Block_Editor();
