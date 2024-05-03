@@ -11,10 +11,10 @@
 ?>
 
 <article <?php post_class( 'wp-site-blocks wp-block-post-content' ); ?>>
-  <div class="has-global-padding is-layout-constrained">
-  	<header>
+  	<header class="has-global-padding is-layout-constrained">
 		<h1><?php esc_html_e( 'Not Found', 'cata' ); ?></h1>
 	</header>
-	<?php get_search_form(); ?>
-  </div>
+	<div class="has-global-padding is-layout-constrained">
+		<?php get_search_form(); ?>
+	</div>
 </article>
