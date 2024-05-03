@@ -12,7 +12,7 @@
 
 <article <?php post_class( 'wp-site-blocks wp-block-post-content' ); ?>>
   	<header class="has-global-padding is-layout-constrained">
-		<h1><?php esc_html_e( 'Not Found', 'cata' ); ?></h1>
+		<h1 class="wp-block-heading"><?php esc_html_e( 'Not Found', 'cata' ); ?></h1>
 	</header>
 	<div class="has-global-padding is-layout-constrained">
 		<?php get_search_form(); ?>
