@@ -96,7 +96,7 @@
 	},
 	"styles": {
 		"spacing": {
-			"blockGap": "1.5em",
+			"blockGap": "calc( var( --wp--style--block-gap, 1.5em ) * 2 )",
 			"padding": {
 				"top": "1.6667em",
 				"left": "3.75vw",
