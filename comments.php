@@ -35,8 +35,13 @@ if ( post_password_required() ) {
 				</ol>
 				<?php the_comments_navigation(); ?>
 			<?php endif; ?>
+			<?php 
+			comment_form(
+				array (
+					'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . ' <span class="required">*</span></label><br /><textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>',
+				)
+			); 
 			?>
-		<?php comment_form(); ?>
 		</div>
 	</div>
 </div>
