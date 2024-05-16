@@ -4,6 +4,7 @@
 	"customTemplates": [],
 	"settings": {
 		"appearanceTools": true,
+		"useRootPaddingAwareAlignments": true,
 		"custom": {
 			"fontScale": "max( 1rem, calc( 0.9375rem + 0.3125vw ) )",
 			"rootPadding": "3.75vw"
@@ -95,7 +96,13 @@
 	},
 	"styles": {
 		"spacing": {
-			"blockGap": "1.5em"
+			"blockGap": "1.5em",
+			"padding": {
+				"top": "1.6667em",
+				"left": "3.75vw",
+				"bottom": "2.7778em",
+				"right": "3.75vw"
+			}
 		},
 		"typography": {
 			"fontSize": "var( --wp--custom--font-scale, 1rem )"

@@ -9,30 +9,30 @@
  */
 
 ?>
-<article <?php post_class( 'entry' ); ?>>
-	<header class="entry__header">
-		<h1 class="entry__title"><?php the_title(); ?></h1>
-	</header>
-	<?php if ( has_post_thumbnail() ) : ?>
-	<figure class="entry__image">
-		<?php the_post_thumbnail(); ?>
-		<?php if ( '' !== get_the_post_thumbnail_caption() ) : ?>
-		<figcaption>
-			<?php the_post_thumbnail_caption(); ?>
-		</figcaption>
+
+<article <?php post_class( 'wp-site-blocks wp-block-post-content' ); ?>>
+	<header class="has-global-padding is-layout-constrained">
+		<h1 class="wp-block-heading"><?php the_title(); ?></h1>
+		<?php if ( has_post_thumbnail() ) : ?>
+			<figure class="wp-block-image">
+				<?php the_post_thumbnail(); ?>
+				<?php if ( '' !== get_the_post_thumbnail_caption() ) : ?>
+					<figcaption class="wp-element-caption">
+						<?php the_post_thumbnail_caption(); ?>
+					</figcaption>
+				<?php endif; ?>
+			</figure>
 		<?php endif; ?>
-	</figure>
-	<?php endif; ?>
-	<div class="entry__content">
+	</header>
+	<div class="has-global-padding is-layout-constrained">
 		<?php the_content(); ?>
+		<?php
+		wp_link_pages(
+			array(
+				'before' => '<nav class="navigation navigation--entry">' . esc_html__( 'Pages:', 'cata' ),
+				'after'  => '</nav>',
+			)
+		);
+		?>
 	</div>
-	<?php
-	wp_link_pages(
-		array(
-			'before' => '<nav class="navigation navigation--entry">' . esc_html__( 'Pages:', 'cata' ),
-			'after'  => '</nav>',
-		)
-	);
-	?>
-	<footer class="entry__footer"></footer>
 </article>
