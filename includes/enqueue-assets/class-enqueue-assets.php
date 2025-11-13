@@ -67,7 +67,7 @@ if ( ! class_exists( 'Cata\Enqueue_Assets' ) ) :
 			if ( false === strpos( $handle, 'cata-module' ) ) {
 				return $tag;
 			}
-			return "<script type=\"module\" src=\"${src}\" async></script>\n";
+			return "<script type=\"module\" src=\"{$src}\" async></script>\n";
 		}
 
 	}
