@@ -23,6 +23,7 @@ if ( ! class_exists( 'Cata\Enqueue_Assets' ) ) :
 			add_action( 'wp_body_open', array( __CLASS__, 'enqueue_styles_nonblocking' ) );
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
 			add_filter( 'script_loader_tag', array( __CLASS__, 'use_module_type' ), 10, 3 );
+			add_action( 'after_setup_theme', array( __CLASS__, 'add_editor_styles' ) );
 		}
 
 		/** 
@@ -70,5 +71,12 @@ if ( ! class_exists( 'Cata\Enqueue_Assets' ) ) :
 			return "<script type=\"module\" src=\"{$src}\" async></script>\n";
 		}
 
+		/**
+		 * Add Editor Styles
+		 */
+		public static function add_editor_styles(): void {
+			add_theme_support( 'editor-styles' );
+			add_editor_style( 'assets/dist/css/editor.css' );
+		}
 	}
 endif;
