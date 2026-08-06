@@ -1,6 +1,6 @@
 {
     "name": "thoughtis/cata",
-    "description": "WordPress theme, initially designed for Shop Catalog.",
+    "description": "WordPress theme for hybrid sites that use the block editor with classic PHP templates.",
     "type": "wordpress-theme",
     "license": "GNU GPL",
     "authors": [
