@@ -5,7 +5,7 @@ License URI: LICENSE
 
 == Description ==
 
-Theme initially designed for Shop Catalog.
+WordPress theme for hybrid sites that use the block editor with classic PHP templates.
 
 == Credits ==
 
