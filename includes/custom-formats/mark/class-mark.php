@@ -29,7 +29,7 @@ class Mark {
 		wp_register_script(
 			'cata-block-editor-format-mark',
 			get_template_directory_uri() . '/assets/dist/js/block-editor-format-mark.js',
-			array( 'wp-rich-text', 'wp-element', 'wp-editor', 'wp-compose', 'wp-data' ),
+			array( 'wp-rich-text', 'wp-element', 'wp-block-editor', 'wp-compose', 'wp-data' ),
 			wp_get_theme( 'cata' )->get( 'Version' ),
 			true
 		);

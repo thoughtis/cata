@@ -17,7 +17,7 @@
 
 	const MarkButton = function( props ) {
 		return wp.element.createElement(
-			wp.editor.RichTextToolbarButton,
+			wp.blockEditor.RichTextToolbarButton,
 			{
 				icon: icon,
 				title: 'Mark / Highlight',
@@ -36,7 +36,7 @@
 	const ConditionalButton = wp.compose.compose(
 		wp.data.withSelect( function( select ) {
 			return {
-				selectedBlock: select( 'core/editor' ).getSelectedBlock()
+				selectedBlock: select( 'core/block-editor' ).getSelectedBlock()
 			}
 		} ),
 		wp.compose.ifCondition( function( props ) {
