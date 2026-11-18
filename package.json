@@ -1,6 +1,6 @@
 {
   "name": "cata",
-  "version": "0.9.6",
+  "version": "0.9.7",
   "description": "WordPress theme for hybrid sites that use the block editor with classic PHP templates.",
   "main": "index.js",
   "type": "module",
